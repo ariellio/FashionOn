@@ -6,7 +6,7 @@ class ApplicationController < ActionController::Base
     end
 
     def ensure_logged_in
-       
+       redirect_to 
     end
 
     def logged_in?

@@ -1,15 +1,16 @@
 import React from 'react';
-import {Providor} from 'react-redux';
+import { Provider} from 'react-redux';
 import { HashRouter } from 'react-router-dom';
+import App from './app'
 
-import App from './app';
+
+
+// import FashionOn from './FashionOn';
 
 const Root = ({store}) => (
-    <Providor store={store}>
-        <HashRouter>
-            <App />
-        </HashRouter>
-    </Providor>
+    <Provider store={store}>
+        <App />
+    </Provider>
 )
 
 export default Root;
