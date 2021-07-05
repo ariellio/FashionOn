@@ -1,7 +1,7 @@
-import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER, RECEIVE_ERRORS} from '../actions/session_actions';
+import { RECEIVE_CURRENT_USER, LOGOUT_CURRENT_USER} from '../actions/session_actions';
 
 
-const sessionsReducer = (oldState= {}, action) => {
+const sessionReducer = (oldState= {}, action) => {
     Object.freeze(oldState);
 
     switch (action.type) {
@@ -14,4 +14,4 @@ const sessionsReducer = (oldState= {}, action) => {
     }
 }
 
-export default sessionsReducer;
+export default sessionReducer;

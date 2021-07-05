@@ -18,38 +18,71 @@ class SessionForm extends React.Component{
         this.props.processForm(user);
     }
 
+    
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value})
     }
   
-
+    renderErrors(){
+        return (
+            <ul>
+                {this.props.errors.map((error, i) => (
+                    <li key={`error-${i}`}>
+                        {error}
+                    </li>
+                ))}
+            </ul>
+        )
+    }
     render(){
         const {formType, errors} = this.props;
         if (formType === 'login') {
             return (<div>
-                {/* <form onSubmit={this.handleSubmit}> */}
-                    <h1>{formType}</h1>
-                    <input 
-                        type="text"
-                        value={this.state.username}
-                        onChange={this.update('username')}
-                    />
+                <form onSubmit={this.handleSubmit}>
+                    {this.renderErrors()}
+                    <h3> Please {formType} Below</h3>
+                    <label> Username
+                        <input 
+                            type="text"
+                            value={this.state.username}
+                            onChange={this.update('username')}
+                        />
+                    </label>
+                    <br />
+                    <label> Password
+                        <input 
+                            type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                        />
+                    </label>
                     <input type="submit" value={formType}/>
-                    <Link to="/login" />
-                {/* </form> */}
+                    {/* <Link to="/login" /> */}
+                </form>
             </div>)
         } else {
             return (<div>
-                {/* <form onSubmit={this.handleSubmit}> */}
-                    <h1>{formType}</h1>
-                    <input
-                        type="text"
-                        value={this.state.username}
-                        onChange={this.update('username')}
-                    />
+                <form onSubmit={this.handleSubmit}>
+                    <h3>Please {formType} Below</h3>
+                    <label>Username
+                        <input
+                            type="text"
+                            value={this.state.username}
+                            onChange={this.update('username')}
+                        />
+                    </label>
+                    <br />
+                    <label>Password
+                            <input
+                            type="password"
+                            value={this.state.password}
+                            onChange={this.update('password')}
+                        />
+                    </label>
                     <input type="submit" value={formType} />
-                    <Link to="/signup" />
-                {/* </form> */}
+                    {/* <Link to="/signup" /> */}
+                </form>
             </div>)
         }  
     }
