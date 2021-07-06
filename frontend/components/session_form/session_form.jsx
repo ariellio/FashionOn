@@ -10,6 +10,7 @@ class SessionForm extends React.Component{
             password: ""
         }
         this.handleSubmit = this.handleSubmit.bind(this);
+        this.handleDemoUser = this.handleDemoUser.bind(this);
     }
 
     handleSubmit(e) {
@@ -18,7 +19,12 @@ class SessionForm extends React.Component{
         this.props.processForm(user);
     }
 
-    
+    handleDemoUser(e){
+        e.preventDefault();
+        const user = { username: "letsgo!!", password: "123456"}
+        this.props.processForm(user)
+        .then(demoUser =>  this.props.history.push("/"));
+    }
 
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value})
@@ -64,6 +70,7 @@ class SessionForm extends React.Component{
                         <input type="submit" value={formType} className="submit-button"/>
                     </div>
                 </form>
+                <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button>
             </div>)
         } else if (formType === 'signup') {
             return (<div className="signup-form-container">
