@@ -12,21 +12,19 @@ class Greeting extends React.Component{
         if (currentUser) {
             return(
                 <div>
-                    <h1>
-                        Welcome Back {currentUser.name}!
+                    <h1 className="greeting">
+                        Welcome Back {currentUser.username}!
                     </h1>
                     <button onClick={logout}> Logout</button>
                 </div>
             )
         } else {
             return (
-                <div>
+                <nav className="login-or-signup">
                     <Link to="/login">Login</Link>
-                    <br></br>
-                    <br></br>
-                    <br></br>
-                    <Link to="/signup">Sign Up</Link>
-                </div>
+                        &nbsp;or&nbsp;
+                    <Link to="/signup">Sign up!</Link>
+                </nav>
             )
         }
     }

@@ -1,4 +1,4 @@
-/*
+/* 
  * This is a manifest file that'll be compiled into application.css, which will include all the files
  * listed below.
  *
@@ -10,6 +10,120 @@
  * files in this directory. Styles in this file should be added after the last require_* statement.
  * It is generally better to create a new file per style scope.
  *
+ 
  *= require_tree .
  *= require_self
  */
+
+ .greeting{
+   color: lightblue;
+   text-align: center;
+   font-family: monospace;
+ }
+
+ button.logout{
+   text-align: center;
+ }
+
+ .logo{
+   
+   text-align: left;
+   box-sizing: content-box;
+ }
+
+ .login-or-signup{
+   font-size: 20px;
+   margin-top: 140px;
+   font-family: monospace;
+ }
+ 
+
+.login-form-container{
+   text-align: center;
+   margin-top: 100px;
+
+ }
+.signup-form-container{
+    justify-content: center;
+    display: flex;
+    margin-top: 100px;
+
+ }
+ .login-form{
+   display: flex; 
+   justify-content: center;
+   flex-direction: column;
+    
+ }
+
+ .login-form-box{
+   outline: 1px solid lightblue;
+   padding: 20px;
+ }
+
+ .signup-form-box{
+   outline: 1px solid lightblue;
+   padding: 20px;
+ }
+
+ .login-input{
+   font-size: 15px;
+   margin-left: 15px;
+ }
+ .signin-input{
+   font-size: 15px;
+   margin-left: 15px;
+ }
+
+.form-descriptor{
+   font-family: monospace; 
+}
+
+input.submit-button{
+   color: white;
+   background-color: black;
+   border-radius: 5px;
+   text-transform: uppercase;
+   padding: 10px;
+}
+
+ul {
+   list-style: none;
+}
+
+.errors{
+   padding: 25px;
+}
+
+.item-photos{
+   border-radius: 50px;
+   display: flex;
+   flex-wrap: wrap;
+}
+
+.item-photos div {
+   flex: 0 0 33.333333%
+}
+
+.item-capt-title { 
+   text-align: start;
+}
+
+.nav-bar {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.searchbar {
+   margin-top: 60px;
+}
+
+li {
+   list-style: none;
+}
+
+.photo-full-capts{
+   max-width: 260px;
+   text-align: center;
+}

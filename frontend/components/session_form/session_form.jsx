@@ -28,7 +28,7 @@ class SessionForm extends React.Component{
         return (
             <ul>
                 {this.props.errors.map((error, i) => (
-                    <li key={`error-${i}`}>
+                    <li className="errors" key={`error-${i}`}>
                         {error}
                     </li>
                 ))}
@@ -38,38 +38,45 @@ class SessionForm extends React.Component{
     render(){
         const {formType, errors} = this.props;
         if (formType === 'login') {
-            return (<div>
-                <form onSubmit={this.handleSubmit}>
+            return (<div className="login-form-container">
+                <form onSubmit={this.handleSubmit} className="login-form-box">
+                    <p className='form-descriptor'> {formType} Below ⬇️ </p>
                     {this.renderErrors()}
-                    <h3> Please {formType} Below</h3>
-                    <label> Username
-                        <input 
-                            type="text"
-                            value={this.state.username}
-                            onChange={this.update('username')}
-                        />
-                    </label>
-                    <br />
-                    <label> Password
-                        <input 
-                            type="password"
-                            value={this.state.password}
-                            onChange={this.update('password')}
-                        />
-                    </label>
-                    <input type="submit" value={formType}/>
-                    {/* <Link to="/login" /> */}
+                    <div className="login-form">
+                        <label> Username:
+                            <input 
+                                type="text"
+                                value={this.state.username}
+                                onChange={this.update('username')}
+                                className="login-input"
+                            />
+                        </label>
+                        <br />
+                        <label> Password:
+                            <input 
+                                type="password"
+                                value={this.state.password}
+                                onChange={this.update('password')}
+                                className="login-input"
+                            />
+                        </label>
+                        <br />
+                        <input type="submit" value={formType} className="submit-button"/>
+                    </div>
                 </form>
             </div>)
-        } else {
-            return (<div>
-                <form onSubmit={this.handleSubmit}>
-                    <h3>Please {formType} Below</h3>
+        } else if (formType === 'signup') {
+            return (<div className="signup-form-container">
+                <form onSubmit={this.handleSubmit} className="signup-form-box">
+                    {this.renderErrors()}
+                    <p className='form-descriptor'> Sign Up Below ⬇️ </p>
+                    <div className="signup-form">
                     <label>Username
                         <input
                             type="text"
                             value={this.state.username}
                             onChange={this.update('username')}
+                            className="signin-input"
                         />
                     </label>
                     <br />
@@ -78,10 +85,12 @@ class SessionForm extends React.Component{
                             type="password"
                             value={this.state.password}
                             onChange={this.update('password')}
+                            className="signin-input"
                         />
                     </label>
-                    <input type="submit" value={formType} />
-                    {/* <Link to="/signup" /> */}
+                        <br />
+                        <input type="submit" value={formType} className="submit-button"/>
+                    </div>
                 </form>
             </div>)
         }  
