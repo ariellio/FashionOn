@@ -26,6 +26,7 @@ class SessionForm extends React.Component{
         .then(demoUser =>  this.props.history.push("/"));
     }
 
+
     update(field) {
         return e => this.setState({ [field]: e.currentTarget.value})
     }
