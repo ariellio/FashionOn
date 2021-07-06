@@ -11,6 +11,7 @@ class SessionForm extends React.Component{
         }
         this.handleSubmit = this.handleSubmit.bind(this);
         this.handleDemoUser = this.handleDemoUser.bind(this);
+        
     }
 
     handleSubmit(e) {
@@ -24,6 +25,10 @@ class SessionForm extends React.Component{
         const user = { username: "letsgo!!", password: "123456"}
         this.props.processForm(user)
         .then(demoUser =>  this.props.history.push("/"));
+    }
+
+    componentWillUnmount(){
+        return (this.props.dispatchedRemoveErrors());
     }
 
 
@@ -48,7 +53,7 @@ class SessionForm extends React.Component{
             return (<div className="login-form-container">
                 <form onSubmit={this.handleSubmit} className="login-form-box">
                     <p className='form-descriptor'> {formType} Below ⬇️ </p>
-                    {this.renderErrors()}
+                    <li className="errors">{ this.renderErrors()}</li>
                     <div className="login-form">
                         <label> Username:
                             <input 
