@@ -1,0 +1,16 @@
+
+.item-photos{
+   border-radius: 50px;
+   display: flex;
+   flex-wrap: wrap;
+   margin-top: 350px;
+   margin-left: -750px;
+}
+
+.item-photos div {
+   flex: 0 0 33.333333%
+}
+
+.item-capt-title { 
+   text-align: start;
+}

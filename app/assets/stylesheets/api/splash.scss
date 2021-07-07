@@ -1,0 +1,31 @@
+.logo{
+   
+   text-align: left;
+   box-sizing: content-box;
+ }
+
+ .login-form-container{
+   text-align: center;
+   margin-top: 500px;
+    position: absolute;
+    margin-left: -760px;
+ }
+
+ .nav-bar {
+   display: flex;
+   flex-direction: row;
+   justify-content: space-evenly;
+}
+
+.searchbar {
+   margin-top: 60px;
+}
+
+li {
+   list-style: none;
+}
+
+.photo-full-capts{
+   max-width: 260px;
+   text-align: center;
+}
