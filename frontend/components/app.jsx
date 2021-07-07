@@ -15,34 +15,34 @@ const App = () => (
         <header>
             <div>
                 <div className="nav-bar">
-                    <li>
+                    <div>
                         <Link to='/'>
                             <img height="200" src="https://lh3.googleusercontent.com/5gfxy4BELemetG70hP3lfs3YS_xWQMxKHwp-bKm5q2-_PyCBP6rEN-s5rt0LVUUP5_XH84YELyjaSrnXHsKdp3Cz3391mhROcuy5Ho_zG-BKEh-oQjG42j3DHPPJNthYZ9pYhS5sSw=w500-h315-p-k" />
                         </Link>
-                    </li>
-                    <li>
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <img className="searchbar" src="https://static.vecteezy.com/system/resources/thumbnails/002/272/250/small/browser-search-bar-template-simple-minimal-design-with-magnifying-glass-search-icon-free-free-vector.jpg" alt="" />
-                    </li>
-                    <li>
+                    </div>
+                    <div>
                         <GreetingsContainer />
-                    </li>
-                    <li>
-                        <Switch>
-                            <Route path="/items" component={ItemIndexContainer} />
-                            <AuthRoute path="/signup" component={SignupFormContainer} />
-                            <AuthRoute path="/login" component={LoginFormContainer} />
-                            <Route path="/" component={SplashComponent}/>
-                        </Switch>
-                    </li>
+                    </div>
                 </div>
-                <ul>
-                    {/* <Splash /> */}
-                </ul>
             </div>
         </header>
 
+        <main>
+            <div>
+                <Switch>
+                    <Route path="/items" component={ItemIndexContainer} />
+                    <AuthRoute path="/signup" component={SignupFormContainer} />
+                    <AuthRoute path="/login" component={LoginFormContainer} />
+                    <Route path="/"/>
+                </Switch>
+            </div>
+        </main>
+        <footer>
+
+        </footer>
     </div>
 );
 

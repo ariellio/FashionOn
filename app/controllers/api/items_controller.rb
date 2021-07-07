@@ -6,12 +6,12 @@ class Api::ItemsController < ApplicationController
     end
 
     def show
-        @item = Item.find(item_params)
+        @item = Item.find(params[:id])
         render :show
     end
 
 
-    def item_params
-        params.require(:item).permit(:name)
-    end
+    # def item_params
+    #     params.require(:item).permit(:name)
+    # end
 end
