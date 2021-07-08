@@ -1,5 +1,4 @@
 .logo{
-   
    text-align: left;
    box-sizing: content-box;
  }
@@ -7,8 +6,8 @@
  .login-form-container{
    text-align: center;
    margin-top: 500px;
-    position: absolute;
-    margin-left: -760px;
+    position: relative;
+    // margin-left: -760px;
  }
 
  .nav-bar {

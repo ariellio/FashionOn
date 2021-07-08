@@ -1,15 +1,16 @@
 import React from 'react';
 import { Route, Switch } from 'react-router';
-import { Link } from 'react-router-dom';
+import { Link, Redirect } from 'react-router-dom';
 import GreetingsContainer from './greeting/greeting_container';
 import LoginFormContainer from './session_form/login_form_container';
 import SignupFormContainer from './session_form/signup_form_container';
 import ItemIndexContainer from './items/item_index_container';
+import SearchBar from './searchbar/searchbar';
 import {AuthRoute} from '../util/route_util';
 import GlobalNav from './global_nav/global';
 import ItemIndex from './items/item_index';
 import SplashComponent from './splash/splash';
-import item_index_container from './items/item_index_container';
+import ItemShowContainer from './items/item_show_container';
 const App = () => (
     <div>
         <header>
@@ -21,7 +22,8 @@ const App = () => (
                         </Link>
                     </div>
                     <div>
-                        <img className="searchbar" src="https://static.vecteezy.com/system/resources/thumbnails/002/272/250/small/browser-search-bar-template-simple-minimal-design-with-magnifying-glass-search-icon-free-free-vector.jpg" alt="" />
+                        {/* <img className="searchbar" src="https://static.vecteezy.com/system/resources/thumbnails/002/272/250/small/browser-search-bar-template-simple-minimal-design-with-magnifying-glass-search-icon-free-free-vector.jpg" alt="" /> */}
+                        
                     </div>
                     <div>
                         <GreetingsContainer />
@@ -33,10 +35,11 @@ const App = () => (
         <main>
             <div>
                 <Switch>
+                    <Route path={`/items/:itemId`} component={ItemShowContainer} />
                     <Route path="/items" component={ItemIndexContainer} />
                     <AuthRoute path="/signup" component={SignupFormContainer} />
                     <AuthRoute path="/login" component={LoginFormContainer} />
-                    <Route path="/"/>
+                    <Redirect from='/' to="/items" />
                 </Switch>
             </div>
         </main>

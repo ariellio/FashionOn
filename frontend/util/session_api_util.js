@@ -1,4 +1,4 @@
-
+//move signup to user api util//
 
 export const signup = user => {
     return $.ajax({

@@ -1,4 +1,12 @@
-json.array! @items do |item|
-    json.extract! item, :id, :name, :description, :price, :category_id
-    json.photoUrl url_for(item.photo) if item.photo.attached?
+@items.each do |item|
+    json.set! item.id do 
+        json.extract! item, :id, :name, :description, :price, :category_id
+        if item.photos.attached?
+            json.photosUrl do json.array! item.photos do |photo| 
+                json.url url_for(photo) 
+                end
+            end
+        end
+    end
+
 end
