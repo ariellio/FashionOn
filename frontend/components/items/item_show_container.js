@@ -6,13 +6,13 @@ import React from 'react';
 
 const mSTP = (state, ownprops) => {
     return {
-        item: state.entities.items[ownprops.match.params.itemId]
+        item: state.entities.items[ownprops.match.params.itemId] 
     }
 }
 
 const mDTP = dispatch => {
     return {
-        fetchItem: (item) => dispatch(fetchItem(item))
+        fetchItem: (itemId) => dispatch(fetchItem(itemId))
     }
 }
 

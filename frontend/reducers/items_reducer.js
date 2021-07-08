@@ -8,7 +8,8 @@ const itemsReducer = (oldState = { }, action) => {
             return action.items
         case RECEIVE_ITEM:
             let newState = Object.assign({}, oldState)
-            return (newState[action.item.id] =  action.item);
+            newState[action.item.id] =  action.item;
+            return newState;
         default:
             return oldState;
     }

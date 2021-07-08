@@ -22,7 +22,14 @@ p "Created #{User.count} users"
 p "Created #{Item.count} items"
 
 
-yeezyPhoto = yeezy.photos.attach( io: File.open("/Users/arieldavies/Downloads/yeezy_photo.jpeg"), filename: "yeezy_photo.jpeg")
-jordanPhoto = jordans.photos.attach( io: File.open("/Users/arieldavies/Downloads/jordans.jpeg"), filename: "jordans.jpeg")
-noahHoodiePhoto = noahHoodie.photos.attach( io: File.open("/Users/arieldavies/Downloads/Noah_hoodie.jpeg"), filename: "Noah_hoodie.jpeg")
-airMaxPhoto = airMax.photos.attach( io: File.open("/Users/arieldavies/Downloads/air-max-97s.jpeg"), filename: "air-max-97s.jpeg")
+yeezyPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/yeezy_photo.jpeg')
+yeezy.photos.attach( io: yeezyPhoto_file, filename: 'yeezy_photo.jpeg')
+jordansPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/jordans.jpeg')
+jordans.photos.attach( io: jordansPhoto_file, filename: 'jordans.jpeg')
+noahHoodiePhoto_file = open('https://fashionon-seed.s3.amazonaws.com/Noah_hoodie.jpeg')
+noahHoodie.photos.attach( io: noahHoodiePhoto_file, filename: 'Noah_hoodie.jpeg')
+airMaxPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/air-max-97s.jpeg')
+airMax.photos.attach( io: airMaxPhoto_file, filename: 'air-max-97s.jpeg')
+# jordanPhoto = jordans.photos.attach( io: File.open("/Users/arieldavies/Downloads/jordans.jpeg"), filename: "jordans.jpeg")
+# noahHoodiePhoto = noahHoodie.photos.attach( io: File.open("/Users/arieldavies/Downloads/Noah_hoodie.jpeg"), filename: "Noah_hoodie.jpeg")
+# airMaxPhoto = airMax.photos.attach( io: File.open("/Users/arieldavies/Downloads/air-max-97s.jpeg"), filename: "air-max-97s.jpeg")

@@ -8,13 +8,21 @@ class ItemShow extends React.Component {
     }
     
     componentDidMount() {
-        this.props.fetchItem(this.props.item.id)
+        this.props.fetchItem(this.props.match.params.itemId)
     }
         
     render() {
+        const {item} = this.props
         return (
             <div>
-                hello {this.props.item.name}
+                hello {item.name}
+
+                {
+                    item.photosUrl.map(photo => {
+                    <img src={photo} alt="" />
+
+                    })
+                }
             </div>
         )
     }
