@@ -141,10 +141,10 @@ li .errors {
   background: linear-gradient(to bottom,#f7dfa5,#f0c14b);
   color: black;
   border-style: none;
-  width: 100%;
-  padding-top: 5px;
+  width: 80%;
+  padding-top: 10px;
   border-radius: 3px;
-  padding-bottom: 5px;
+  padding-bottom: 10px;
 }
 
 .login-form-main-content {
@@ -199,6 +199,7 @@ li .errors {
   flex-wrap: nowrap;
   color: gray;
   font-size: 12px;
+  padding-bottom: 50px;
 }
 
 .switch-to-other-form > p {
