@@ -50,34 +50,43 @@ class SessionForm extends React.Component{
     render(){
         const {formType, errors} = this.props;
         if (formType === 'login') {
-            return (<div className="login-form-container">
-                <form onSubmit={this.handleSubmit} className="login-form-box">
-                    <p className='form-descriptor'> {formType} Below ⬇️ </p>
-                    <li className="errors">{ this.renderErrors()}</li>
-                    <div className="login-form">
-                        <label> Username:
-                            <input 
-                                type="text"
-                                value={this.state.username}
-                                onChange={this.update('username')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <label> Password:
-                            <input 
-                                type="password"
-                                value={this.state.password}
-                                onChange={this.update('password')}
-                                className="login-input"
-                            />
-                        </label>
-                        <br />
-                        <input type="submit" value={formType} className="submit-button"/>
+            return (
+                <div className="whole-form">
+                    <div className="login-form-container">
+                        <form onSubmit={this.handleSubmit} className="login-form-box">
+                            <div className="login-form-content">
+                                <div className="login-form-header">
+                                    <p className='form-descriptor'> {formType} Below ⬇️ </p>
+                                    <li className="errors">{ this.renderErrors()}</li>
+                                </div>
+                                <div className="login-form-main">
+                                    <label> Username:
+                                        <input 
+                                            type="text"
+                                            value={this.state.username}
+                                            onChange={this.update('username')}
+                                            className="login-input"
+                                        />
+                                    </label>
+                                    <br />
+                                    <label> Password:
+                                        <input 
+                                            type="password"
+                                            value={this.state.password}
+                                            onChange={this.update('password')}
+                                            className="login-input"
+                                        />
+                                    </label>
+                                    <br />
+                                    <div className="login-form-footer">
+                                        <input type="submit" value={formType} className="submit-button"/>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button>
                     </div>
-                </form>
-                <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button>
-            </div>)
+                </div>)
         } else if (formType === 'signup') {
             return (<div className="signup-form-container">
                 <form onSubmit={this.handleSubmit} className="signup-form-box">

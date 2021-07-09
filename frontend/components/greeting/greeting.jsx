@@ -20,11 +20,11 @@ class Greeting extends React.Component{
             )
         } else {
             return (
-                <nav className="login-or-signup">
+                <div className="login-or-signup">
                     <Link to="/login">Login</Link>
                         &nbsp;or&nbsp;
                     <Link to="/signup">Sign up!</Link>
-                </nav>
+                </div>
             )
         }
     }

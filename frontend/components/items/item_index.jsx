@@ -21,29 +21,29 @@ class ItemIndex extends React.Component{
                         let photos 
                         if (item.photosUrl) {
                             photos = item.photosUrl.map(
-                                photo => {
-                                    return <img src={photo.url} alt="" />
+                                (photo, i) => {
+                                    return <img height="350px" key={i} src={photo.url} alt="" />
                                 }
                             )
                         }
-                        return (<div className={`item-display-info`}> 
-                            <li>
-                               
-                                <Link to={`/items/${item.id}`}>
+                        return (
+                        <div className={`item-display-info`}> 
+                                <div className="items-display-header">
                                     {item.name}
-                                    {photos}
-                                </Link>
-                                {/* {item.description}
-                                {item.price}
-                                <br /> */}
-                               
-                                {/* <img src={`${item.photoUrl}`} alt="" /> */}
-                            </li>
+                                </div>
+                                <div className="items-display-main">
+                                    <div className="splash-photos">
+                                        <Link to={`/items/${item.id}`}>
+                                            {photos}
+                                        </Link>
+                                    </div>
+                                </div>
+                                <div className="items-display-footer">
+                                    {item.description}
+                                </div>
                         </div>)
 
-                    }
-
-                    )
+                    })
                 }
             </div>
         )

@@ -11,28 +11,54 @@ import GlobalNav from './global_nav/global';
 import ItemIndex from './items/item_index';
 import SplashComponent from './splash/splash';
 import ItemShowContainer from './items/item_show_container';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faSearch } from '@fortawesome/free-solid-svg-icons'
+
+
+
 const App = () => (
     <div>
         <header>
-            <div>
-                <div className="nav-bar">
+            <div className="nav-bar">
+                <div>
+                    <Link to='/'>
+                        <img height="65" src="https://lh3.googleusercontent.com/5gfxy4BELemetG70hP3lfs3YS_xWQMxKHwp-bKm5q2-_PyCBP6rEN-s5rt0LVUUP5_XH84YELyjaSrnXHsKdp3Cz3391mhROcuy5Ho_zG-BKEh-oQjG42j3DHPPJNthYZ9pYhS5sSw=w500-h315-p-k" />
+                    </Link>
+                </div>
+                <div className="searchBar">
                     <div>
-                        <Link to='/'>
-                            <img height="200" src="https://lh3.googleusercontent.com/5gfxy4BELemetG70hP3lfs3YS_xWQMxKHwp-bKm5q2-_PyCBP6rEN-s5rt0LVUUP5_XH84YELyjaSrnXHsKdp3Cz3391mhROcuy5Ho_zG-BKEh-oQjG42j3DHPPJNthYZ9pYhS5sSw=w500-h315-p-k" />
-                        </Link>
+                        <input 
+                            type="text"
+                            width="200px"
+                        />
                     </div>
                     <div>
-                        {/* <img className="searchbar" src="https://static.vecteezy.com/system/resources/thumbnails/002/272/250/small/browser-search-bar-template-simple-minimal-design-with-magnifying-glass-search-icon-free-free-vector.jpg" alt="" /> */}
-                        
+                        <FontAwesomeIcon icon={faSearch} />
                     </div>
-                    <div>
-                        <GreetingsContainer />
-                    </div>
+                </div>
+                <div>
+                    <GreetingsContainer />
+                </div>
+            </div>
+            <div className="category-bar">
+                <div>
+                    Shirts
+                </div>
+                <div>
+                    Shoes
+                </div>
+                <div>
+                    Hoodies
+                </div>
+                <div>
+                    Jeans
                 </div>
             </div>
         </header>
-
         <main>
+            <div className="banner-photo">
+                <img height="400px" width="100%"src="https://fashionon-seed.s3.amazonaws.com/splash_banner.jpeg" alt="" />
+            </div>
             <div>
                 <Switch>
                     <Route path={`/items/:itemId`} component={ItemShowContainer} />
@@ -44,7 +70,38 @@ const App = () => (
             </div>
         </main>
         <footer>
-
+            <div className="footer">
+                <div>
+                    Back to top
+                </div>
+                <div className="bigFooter">
+                    <div>
+                        <p className="footerInfo">
+                            Get to know us
+                        </p>
+                    </div>
+                    <div>
+                        <p className="footerInfo">
+                            Make Money with us
+                        </p>
+                    </div>
+                    <div>
+                        <p className="footerInfo">
+                            FashionOn Payment Products
+                        </p>
+                    </div>
+                    <div>
+                        <p className="footerInfo">
+                            Let us Help You
+                        </p>
+                    </div>
+                    <div>
+                        <p className="footerInfo">
+                            Logo and locations 
+                        </p>
+                    </div>
+                </div>
+            </div>
         </footer>
     </div>
 );

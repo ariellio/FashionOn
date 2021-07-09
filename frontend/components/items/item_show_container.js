@@ -3,6 +3,7 @@ import ItemShow from './item_show';
 import { fetchItem } from '../../actions/item_actions';
 import { Link } from 'react-router-dom';
 import React from 'react';
+import { fetchItems } from '../../util/item_api_util';
 
 const mSTP = (state, ownprops) => {
     return {
@@ -12,7 +13,7 @@ const mSTP = (state, ownprops) => {
 
 const mDTP = dispatch => {
     return {
-        fetchItem: (itemId) => dispatch(fetchItem(itemId))
+        fetchItem: (itemId) => dispatch(fetchItem(itemId)),
     }
 }
 

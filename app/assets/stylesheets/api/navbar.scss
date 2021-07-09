@@ -1,0 +1,17 @@
+
+.nav-bar {
+    background: navy;
+    display: flex;
+    justify-content: space-around;
+    align-items: baseline;
+    padding: 10px;
+    height: calc(5vh);
+}
+
+.category-bar{
+    display: flex;
+    background: blue;
+    justify-content: space-evenly;
+    padding: 20px;
+    color:white;
+}
