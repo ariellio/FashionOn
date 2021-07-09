@@ -1,7 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
 
-
+function footer() {
+    return (
 <div className="footer">
     <div>
         Back to top
@@ -34,3 +35,7 @@ import { Link } from 'react-router-dom';
         </div>
     </div>
 </div>
+    )
+};
+
+export default footer

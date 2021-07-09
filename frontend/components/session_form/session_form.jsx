@@ -66,14 +66,20 @@ class SessionForm extends React.Component{
                                         <li className="errors">{ this.renderErrors()}</li>
                                     </div>
                                     <div className="login-form-main">
-                                        <label className="login-form-main-content"> Username:
+                                        <div>
+                                            <label className="login-form-main-content"> Username:
+                                            
+                                        <div className="username=input">
+                                            <br />
                                             <input 
                                                 type="text"
                                                 value={this.state.username}
                                                 onChange={this.update('username')}
                                                 className="login-input"
                                             />
+                                        </div>
                                         </label>
+                                        </div>
                                         <br />
                                         <label className="login-form-main-content"> Password:
                                             <input 
@@ -143,6 +149,7 @@ class SessionForm extends React.Component{
                                             />
                                         </label>
                                         <br />
+                                        {/* make separate component for footer */}
                                         <div className="login-form-footer">
                                             <input type="submit" value={formType} className="submit-button" />
                                             <br />

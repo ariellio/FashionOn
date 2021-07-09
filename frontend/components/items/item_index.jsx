@@ -15,6 +15,11 @@ class ItemIndex extends React.Component{
     render(){
         const {items} = this.props
         return(
+                <div>
+                    
+            <div className="banner-photo">
+                            <img height="400px" width="100%" src="https://fashionon-seed.s3.amazonaws.com/splash_banner.jpeg" alt="" />
+                        </div>
             <div className="items-display-info">
                 {
                     items.map( item => {
@@ -46,6 +51,7 @@ class ItemIndex extends React.Component{
                     })
                 }
             </div>
+                </div>
         )
     }
 }

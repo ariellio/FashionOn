@@ -9,11 +9,12 @@ import SearchBar from './searchbar/searchbar';
 import {AuthRoute} from '../util/route_util';
 import GlobalNav from './global_nav/global';
 import ItemIndex from './items/item_index';
-import SplashComponent from './splash/splash';
+import SplashComponent from './navbar/navbar';
 import ItemShowContainer from './items/item_show_container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import Footer from './footer/footer';
+import Main from './main';
 
 
 const App = () => (
@@ -23,21 +24,11 @@ const App = () => (
         </header> */}
             <div>
                 <Switch>
-                    <AuthRoute path="/signup" component={SignupFormContainer} />
-                    <AuthRoute path="/login" component={LoginFormContainer} />
-                    <Route path={`/items/:itemId`} component={ItemShowContainer} />
-                    <Route path="/" render={ () =>
-                            <div>
-                                <SplashComponent/>
-                                <div className="banner-photo">
-                                    <img height="400px" width="100%" src="https://fashionon-seed.s3.amazonaws.com/splash_banner.jpeg" alt="" />
-                                </div>
-                                <ItemIndexContainer />
-                            </div>
-                        } 
-                    />
-                    {/* <Redirect from='/' to="/items" /> */}
+                    <AuthRoute exact path="/signup" component={SignupFormContainer} />
+                    <AuthRoute exact path="/login" component={LoginFormContainer} />
+                    <Route path="/" component={Main} />
                 </Switch>
+                    <Footer />
             </div>
     </div>
 );
