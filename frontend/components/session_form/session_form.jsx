@@ -51,40 +51,46 @@ class SessionForm extends React.Component{
         const {formType, errors} = this.props;
         if (formType === 'login') {
             return (
-                <div className="whole-form">
-                    <div className="login-form-container">
-                        <form onSubmit={this.handleSubmit} className="login-form-box">
-                            <div className="login-form-content">
-                                <div className="login-form-header">
-                                    <p className='form-descriptor'> {formType} Below ⬇️ </p>
-                                    <li className="errors">{ this.renderErrors()}</li>
-                                </div>
-                                <div className="login-form-main">
-                                    <label> Username:
-                                        <input 
-                                            type="text"
-                                            value={this.state.username}
-                                            onChange={this.update('username')}
-                                            className="login-input"
-                                        />
-                                    </label>
-                                    <br />
-                                    <label> Password:
-                                        <input 
-                                            type="password"
-                                            value={this.state.password}
-                                            onChange={this.update('password')}
-                                            className="login-input"
-                                        />
-                                    </label>
-                                    <br />
-                                    <div className="login-form-footer">
-                                        <input type="submit" value={formType} className="submit-button"/>
+                <div className="Auth-Container"> 
+                    <div className="logo-auth">
+                        Logo
+                    </div>
+                    <div className="whole-form">
+                        <div className="login-form-container">
+                            <form onSubmit={this.handleSubmit} className="login-form-box">
+                                <div className="login-form-content">
+                                    <div className="login-form-header">
+                                        <p className='form-descriptor'> Login </p>
+                                        <li className="errors">{ this.renderErrors()}</li>
+                                    </div>
+                                    <div className="login-form-main">
+                                        <label> Username:
+                                            <input 
+                                                type="text"
+                                                value={this.state.username}
+                                                onChange={this.update('username')}
+                                                className="login-input"
+                                            />
+                                        </label>
+                                        <br />
+                                        <label> Password:
+                                            <input 
+                                                type="password"
+                                                value={this.state.password}
+                                                onChange={this.update('password')}
+                                                className="login-input"
+                                            />
+                                        </label>
+                                        <br />
+                                        <div className="login-form-footer">
+                                            <input type="submit" value={formType} className="submit-button"/>
+                                            <br />
+                                            <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button>
+                                        </div>
                                     </div>
                                 </div>
-                            </div>
-                        </form>
-                        <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button>
+                            </form>
+                        </div>
                     </div>
                 </div>)
         } else if (formType === 'signup') {
