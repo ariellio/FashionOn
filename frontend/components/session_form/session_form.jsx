@@ -54,7 +54,7 @@ class SessionForm extends React.Component{
                 <div className="Auth-Container">
                     <div className="logo-auth">
                         <Link to='/'>
-                            <img height="100" src="https://lh3.googleusercontent.com/5gfxy4BELemetG70hP3lfs3YS_xWQMxKHwp-bKm5q2-_PyCBP6rEN-s5rt0LVUUP5_XH84YELyjaSrnXHsKdp3Cz3391mhROcuy5Ho_zG-BKEh-oQjG42j3DHPPJNthYZ9pYhS5sSw=w500-h315-p-k" />
+                            <img height="75" src="https://fashionon-seed.s3.amazonaws.com/Screen+Shot+2021-07-10+at+7.36.35+PM.png" />
                         </Link>
                     </div>
                     <div className="whole-form">
@@ -120,7 +120,7 @@ class SessionForm extends React.Component{
             <div className="Auth-Container">
                     <div className="logo-auth">
                         <Link to='/'>
-                            <img height="100" src="https://lh3.googleusercontent.com/5gfxy4BELemetG70hP3lfs3YS_xWQMxKHwp-bKm5q2-_PyCBP6rEN-s5rt0LVUUP5_XH84YELyjaSrnXHsKdp3Cz3391mhROcuy5Ho_zG-BKEh-oQjG42j3DHPPJNthYZ9pYhS5sSw=w500-h315-p-k" />
+                            <img height="75" src="https://fashionon-seed.s3.amazonaws.com/Screen+Shot+2021-07-10+at+7.36.35+PM.png" />
                         </Link>
                     </div>
                     <div className="whole-form">
