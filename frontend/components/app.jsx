@@ -15,18 +15,18 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import Footer from './footer/footer';
 import Main from './main';
+import Greeting from './greeting/greeting';
 
 
 const App = () => (
     <div>
-    
             <div>
                 <Switch>
                     <AuthRoute exact path="/signup" component={SignupFormContainer} />
                     <AuthRoute exact path="/login" component={LoginFormContainer} />
                     <Route path="/" component={Main} />
                 </Switch>
-                    {/* <Footer /> */}
+                    
             </div>
     </div>
 );
