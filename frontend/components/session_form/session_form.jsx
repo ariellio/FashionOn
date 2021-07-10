@@ -66,11 +66,18 @@ class SessionForm extends React.Component{
                                         <li className="errors">{ this.renderErrors()}</li>
                                     </div>
                                     <div className="login-form-main">
+<<<<<<< HEAD
                                         <div>
                                             <label className="login-form-main-content"> Username:
                                             
                                         <div className="username=input">
                                             <br />
+=======
+                                        <label className="login-form-main-content">
+                                            <p>
+                                                Username
+                                            </p> 
+>>>>>>> auth
                                             <input 
                                                 type="text"
                                                 value={this.state.username}
@@ -81,7 +88,10 @@ class SessionForm extends React.Component{
                                         </label>
                                         </div>
                                         <br />
-                                        <label className="login-form-main-content"> Password:
+                                        <label className="login-form-main-content"> 
+                                            <p>
+                                                Password
+                                            </p>
                                             <input 
                                                 type="password"
                                                 value={this.state.password}
@@ -91,7 +101,7 @@ class SessionForm extends React.Component{
                                         </label>
                                         <br />
                                         <div className="login-form-footer">
-                                            <input type="submit" value={formType} className="submit-button"/>
+                                            <input type="submit" value="Continue" className="submit-button"/>
                                             <br />
                                             <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button>
                                         </div>
@@ -103,7 +113,7 @@ class SessionForm extends React.Component{
                     <div className="switch-to-other-form">
                             <p>New to FashionOn?</p>
                             <div>
-                                <Link to="/signup"><button className="switchFormsButton">Create Your FashionOn Account</button> </Link>
+                                <Link to="/signup"><button className="switchFormsButton">Create your FashionOn account</button> </Link>
                             </div>
                     </div>
                     <div className="form-footer">
@@ -131,7 +141,10 @@ class SessionForm extends React.Component{
                                         <li className="errors">{this.renderErrors()}</li>
                                     </div>
                                     <div className="login-form-main">
-                                        <label className="login-form-main-content"> Username:
+                                        <label className="login-form-main-content"> 
+                                            <p>
+                                                Username
+                                            </p> 
                                             <input
                                                 type="text"
                                                 value={this.state.username}
@@ -140,7 +153,10 @@ class SessionForm extends React.Component{
                                             />
                                         </label>
                                         <br />
-                                        <label className="login-form-main-content"> Password:
+                                        <label className="login-form-main-content"> 
+                                            <p>
+                                                Password
+                                            </p> 
                                             <input
                                                 type="password"
                                                 value={this.state.password}
@@ -151,9 +167,8 @@ class SessionForm extends React.Component{
                                         <br />
                                         {/* make separate component for footer */}
                                         <div className="login-form-footer">
-                                            <input type="submit" value={formType} className="submit-button" />
+                                            <input type="submit" value="Signup" className="submit-button" />
                                             <br />
-                                            {/* <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button> */}
                                         </div>
                                     </div>
                                 </div>
@@ -163,7 +178,7 @@ class SessionForm extends React.Component{
                     <div className="switch-to-other-form">
                         <p>Already have an account?</p>
                         <div>
-                            <Link to="/login"><button className="switchFormsButton">Login To Your FashionOn Account</button> </Link>
+                            <Link to="/login"><button className="switchFormsButton">Login to your FashionOn account</button> </Link>
                         </div>
                     </div>
                     <div className="form-footer">
