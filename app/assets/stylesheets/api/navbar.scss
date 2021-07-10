@@ -1,17 +1,120 @@
+// .nav-bar {
+//     background: navy;
+//     display: flex;
+//     justify-content: space-around;
+//     align-items: baseline;
+//     padding: 10px;
+//     height: calc(5vh);
+// }
 
-.nav-bar {
-    background: navy;
-    display: flex;
-    justify-content: space-around;
-    align-items: baseline;
-    padding: 10px;
-    height: calc(5vh);
+.category-bar {
+  display: flex;
+  background: #232f3e;
+  justify-content: space-evenly;
+  padding: 20px;
+  color: white;
 }
 
-.category-bar{
-    display: flex;
-    background: blue;
-    justify-content: space-evenly;
-    padding: 20px;
-    color:white;
+// .logo-header {
+//   //   float: left;
+// }
+
+// .nav-bar {
+//   background: #131921;
+//   display: flex;
+//   justify-content: space-around;
+//   align-items: baseline;
+//   padding-left: 150px;
+//   height: calc(5vh);
+// }
+
+// .searchBar {
+//   display: flex;
+//   align-items: center;
+//   width: 80%;
+//   margin-top: 20px;
+//   position: relative;
+// }
+
+// .searchBar > input {
+//   font-size: x-large;
+//   width: 80%;
+// }
+
+// .magnifyingGlass {
+//   background: #febd69;
+//   border: solid #febd69;
+//   border-radius: 3px;
+//   position: relative;
+// }
+
+// .login-orsignup {
+//   display: flex;
+//   flex-direction: column;
+//   width: 100%;
+//   padding: 10px;
+// }
+
+.nav-bar {
+  display: flex;
+  //   justify-content: space-between;
+  height: calc(4.5vh);
+  background: #131921;
+}
+
+.searchBar > input {
+  width: 900px;
+  font-size: x-large;
+  margin-top: 15px;
+}
+
+.magnifyingGlass {
+  position: relative;
+  right: 28px;
+  background: #febd69;
+  padding: 5px;
+  padding-bottom: 7.2px;
+  padding-top: 7px;
+  bottom: 3px;
+  border-radius: 3px;
+  border: solid #febd69;
+  border-width: 0.5px;
+}
+
+.logo-header {
+  flex-grow: 1;
+}
+
+.searchBar {
+  display: flex;
+  align-items: baseline;
+  flex-grow: 1;
+}
+
+.right-side {
+  display: flex;
+  flex-direction: row;
+  flex-grow: 1;
+  justify-content: space-around;
+}
+
+.login-or-signup {
+  top: 5px;
+  margin-top: 15px;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-or-signup > p > a {
+  font-size: 12px;
+  color: white;
+}
+
+.shoppingCart {
+  margin-top: 10px;
+  color: white;
+}
+
+.shoppingCart > svg {
+  font-size: 40px;
 }

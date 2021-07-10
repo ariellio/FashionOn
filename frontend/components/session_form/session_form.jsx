@@ -102,7 +102,7 @@ class SessionForm extends React.Component{
                         </div>
                     </div>
                     <div className="switch-to-other-form">
-                        <p>Don't have a FashionOn account?</p>
+                        <p>Don't have FashionOn account?</p>
                         <div>
                             <Link to="/signup"><button className="switchFormsButton">Create your FashionOn account</button> </Link>
                         </div>

@@ -7,39 +7,35 @@ import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 
 
 
+
 const Navbar = () => {
 
    return( 
           <header>
+                            
+                         
                  <div className="nav-bar">
-                        <div className="left-side">
-                            <div className="logo-header">
-                                   <Link to='/'>
-                                             <img height="65" src="https://fashionon-seed.s3.amazonaws.com/Screen+Shot+2021-07-09+at+3.10.32+PM.png" />
-                                   </Link>
-                            </div>
+                     <div className="logo-header">
+                            <Link to='/'>
+                                          <img height="60" src="https://fashionon-seed.s3.amazonaws.com/Screen+Shot+2021-07-09+at+3.10.32+PM.png" />
+                            </Link>
+                     </div>
                             <div className="searchBar">
-                                   <div className="nav-left">
-                                   </div>
-                                   <div className="nav-middle">
-                                          <input
-                                                 type="text"
-                                                 width="200px"
-                                          />
-                                   </div>
-                                   <div className="nav-right">
+                                   <input
+                                          type="text"
+                                          width="200px"
+                                          
+                                   />
+                                   <div className="magnifyingGlass">
                                           <FontAwesomeIcon icon={faSearch} />
                                    </div>
-                        </div>
-                            <div className="right-side">
-                                   <div>
-                                          <GreetingsContainer />
-                                   </div>
-                                   <div>
-                                          <FontAwesomeIcon icon={faShoppingCart}/>
-                                   </div>
                             </div>
-                        </div>
+                     <div className="right-side">
+                                   <GreetingsContainer />
+                            <div className="shoppingCart">
+                                   <FontAwesomeIcon icon={faShoppingCart}/>
+                            </div>
+                     </div>
                  </div>
                  <div className="category-bar">
                      <div>
