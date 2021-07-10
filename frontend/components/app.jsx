@@ -19,9 +19,7 @@ import Main from './main';
 
 const App = () => (
     <div>
-        {/* <header>
-            <SplashComponent/>
-        </header> */}
+    
             <div>
                 <Switch>
                     <AuthRoute exact path="/signup" component={SignupFormContainer} />
