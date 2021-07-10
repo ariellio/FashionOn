@@ -43,9 +43,9 @@ class ItemIndex extends React.Component{
                                         </Link>
                                     </div>
                                 </div>
-                                <div className="items-display-footer">
+                                {/* <div className="items-display-footer">
                                     {item.description}
-                                </div>
+                                </div> */}
                         </div>)
 
                     })
