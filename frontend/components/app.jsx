@@ -15,13 +15,11 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import Footer from './footer/footer';
 import Main from './main';
+import Greeting from './greeting/greeting';
 
 
 const App = () => (
     <div>
-        {/* <header>
-            <SplashComponent/>
-        </header> */}
             <div>
                 <Switch>
                     <AuthRoute exact path="/signup" component={SignupFormContainer} />

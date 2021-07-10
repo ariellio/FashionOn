@@ -4,58 +4,41 @@ import GreetingsContainer from '../greeting/greeting_container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import Greeting from '../greeting/greeting';
 
 
 
 const Navbar = () => {
 
    return( 
-          <header>
-                 <div className="nav-bar">
-                        <div className="left-side">
-                            <div className="logo-header">
-                                   <Link to='/'>
-                                             <img height="65" src="https://fashionon-seed.s3.amazonaws.com/Screen+Shot+2021-07-09+at+3.10.32+PM.png" />
-                                   </Link>
-                            </div>
-                            <div className="searchBar">
-                                   <div className="nav-left">
-                                   </div>
-                                   <div className="nav-middle">
-                                          <input
-                                                 type="text"
-                                                 width="200px"
-                                          />
-                                   </div>
-                                   <div className="nav-right">
-                                          <FontAwesomeIcon icon={faSearch} />
-                                   </div>
-                        </div>
-                            <div className="right-side">
-                                   <div>
-                                          <GreetingsContainer />
-                                   </div>
-                                   <div>
-                                          <FontAwesomeIcon icon={faShoppingCart}/>
-                                   </div>
-                            </div>
-                        </div>
-                 </div>
-                 <div className="category-bar">
-                     <div>
-                            Shirts
+       <div className="navbar">
+              <Link to='/'>
+                     <img className="header__logo" src="https://fashionon-seed.s3.amazonaws.com/Screen+Shot+2021-07-10+at+6.57.31+PM.png" />
+              </Link>
+
+              <div className="header__search">
+                     <input className="header__searchInput" type="text"/>
+                     <FontAwesomeIcon className="header__searchIcon" icon={faSearch} />
+              </div>
+
+              <div className="header__nav">
+                     <div className="header__option">
+                            <GreetingsContainer />
                      </div>
-                     <div>
-                            Shoes
+                     <div className="header__option">
+                            <span className="header__optionOne">
+                                   Returns
+                            </span>
+                            <span className="header__optionTwo">
+                                   & Orders
+                            </span>
                      </div>
-                     <div>
-                            Hoodies
-                     </div>
-                     <div>
-                            Jeans
-                     </div>
-                 </div>
-          </header>
+                    <div className="header__optionCart">
+                           <FontAwesomeIcon icon={faShoppingCart} />
+                           <span className="header_optionTwo header__cartCount">0</span>
+                    </div>
+              </div>
+       </div>
     )
 }
 
