@@ -7,7 +7,7 @@ import {AuthRoute} from '../util/route_util';
 import SplashComponent from './navbar/navbar';
 import ItemShowContainer from './items/item_show_container';
 import Navbar from './navbar/navbar';
-
+import Footer from './footer/footer';
 
 
 const Main = () => (
@@ -17,6 +17,7 @@ const Main = () => (
             <Route path="/items/:itemId" component={ItemShowContainer} />
             <Route path="/" component={ItemIndexContainer} />
         </Switch>
+        <Footer />
     </div>
     
 );
