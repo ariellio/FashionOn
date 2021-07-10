@@ -51,7 +51,7 @@ class SessionForm extends React.Component{
         const {formType, errors} = this.props;
         if (formType === 'login') {
             return (
-                <div className="Auth-Container"> 
+                <div className="Auth-Container">
                     <div className="logo-auth">
                         <Link to='/'>
                             <img height="100" src="https://lh3.googleusercontent.com/5gfxy4BELemetG70hP3lfs3YS_xWQMxKHwp-bKm5q2-_PyCBP6rEN-s5rt0LVUUP5_XH84YELyjaSrnXHsKdp3Cz3391mhROcuy5Ho_zG-BKEh-oQjG42j3DHPPJNthYZ9pYhS5sSw=w500-h315-p-k" />
@@ -62,37 +62,27 @@ class SessionForm extends React.Component{
                             <form onSubmit={this.handleSubmit} className="login-form-box">
                                 <div className="login-form-content">
                                     <div className="login-form-header">
-                                        <p className='form-descriptor'> Sign-In </p>
-                                        <li className="errors">{ this.renderErrors()}</li>
+                                        <p className='form-descriptor'> Login </p>
+                                        <li className="errors">{this.renderErrors()}</li>
                                     </div>
                                     <div className="login-form-main">
-<<<<<<< HEAD
-                                        <div>
-                                            <label className="login-form-main-content"> Username:
-                                            
-                                        <div className="username=input">
-                                            <br />
-=======
-                                        <label className="login-form-main-content">
+                                        <label className="login-form-main-content"> 
                                             <p>
                                                 Username
                                             </p> 
->>>>>>> auth
-                                            <input 
+                                            <input
                                                 type="text"
                                                 value={this.state.username}
                                                 onChange={this.update('username')}
                                                 className="login-input"
                                             />
-                                        </div>
                                         </label>
-                                        </div>
                                         <br />
                                         <label className="login-form-main-content"> 
                                             <p>
                                                 Password
-                                            </p>
-                                            <input 
+                                            </p> 
+                                            <input
                                                 type="password"
                                                 value={this.state.password}
                                                 onChange={this.update('password')}
@@ -105,16 +95,17 @@ class SessionForm extends React.Component{
                                             <br />
                                             <button className="demoUser" onClick={this.handleDemoUser}>Demo User</button>
                                         </div>
+                                        {/* make separate component for footer */}
                                     </div>
                                 </div>
                             </form>
                         </div>
                     </div>
                     <div className="switch-to-other-form">
-                            <p>New to FashionOn?</p>
-                            <div>
-                                <Link to="/signup"><button className="switchFormsButton">Create your FashionOn account</button> </Link>
-                            </div>
+                        <p>Don't have a FashionOn account?</p>
+                        <div>
+                            <Link to="/signup"><button className="switchFormsButton">Create your FashionOn account</button> </Link>
+                        </div>
                     </div>
                     <div className="form-footer">
                         <div className="form-footer-items">
@@ -123,7 +114,7 @@ class SessionForm extends React.Component{
                             <p className="form-footer-item-ps">Help</p>
                         </div>
                     </div>
-                </div>)
+                </div>)    
         } else if (formType === 'signup') {
             return(
             <div className="Auth-Container">
