@@ -4,10 +4,10 @@ import { Link } from 'react-router-dom';
 class Footer extends React.Component {
         constructor(props){
             super(props)
-            this.componentDidUpdate = this.componentDidUpdate.bind(this);
+            // this.componentDidUpdate = this.componentDidUpdate.bind(this);
         }
 
-        componentDidUpdate(prevProps){
+        componentDidUpdate(){
             return window.scrollTo(0, 0);
         }
 
