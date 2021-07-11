@@ -63,14 +63,26 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  background: #37475a;
+  color: white;
+}
+
+.footer > div {
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+.footer:hover {
+  cursor: pointer;
+  background: #485769;
 }
 
 .bigFooter {
   // padding: 10px;
   width: 100%;
   display: flex;
-  flex-direction: column;
-  background: burlywood;
+  flex-direction: row;
+  justify-content: space-around;
+  background: #131a22;
 }
 
 .footerInfo {
