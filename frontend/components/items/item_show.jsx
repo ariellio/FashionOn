@@ -20,7 +20,7 @@ class ItemShow extends React.Component {
                 {/* <img src={item.photosUrl[0].url} alt="" /> */}
                 {
                     item.photosUrl.map((photo, i) => {
-                        return <img key={i} src={photo.url} alt="" />
+                        return <img height="350px" key={i} src={photo.url} alt="" />
                         
                     })
                 }
