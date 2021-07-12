@@ -4,6 +4,7 @@ import GreetingsContainer from '../greeting/greeting_container';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
+import { fasSortDown } from '@fortawesome/free-solid-svg-icons'
 import Greeting from '../greeting/greeting';
 
 
@@ -55,6 +56,14 @@ const Navbar = () => {
                             Jeans
                      </span>
               </div>
+              {/* <div className="dropdown__content">
+                     <span className="link__to__login">
+                            <button className="login__signup__buttons"><Link to="/login">Sign In</Link></button>
+                     </span>
+                     <span className="link__to__signup">
+                            New customer? <Link to="/signup"> Start here.</Link>
+                     </span>
+              </div> */}
        </div>
     )
 }

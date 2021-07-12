@@ -158,3 +158,102 @@
   background: #232f3e;
   align-items: center;
 }
+
+.dropdown {
+  display: flex;
+  flex-direction: column;
+}
+
+.dropdown__content {
+  float: right;
+  display: flex;
+  flex-direction: column;
+  height: 100px;
+  width: 200px;
+  background: white;
+  padding-top: 5px;
+  border-radius: 4px;
+  position: absolute;
+  justify-content: center;
+  margin-top: 35px;
+  margin-left: -110px;
+  padding: 30px;
+  visibility: hidden;
+  transition: 0.3s;
+}
+
+.link__to__login {
+  text-align: center;
+}
+
+.welcome__message__one {
+  font-size: 12px;
+}
+.welcome__message__two {
+  font-size: 14px;
+  font-weight: bold;
+}
+
+.login__signup__buttons {
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  border-color: #a88734 #9c7e31 #846a29;
+  border-width: 0.5px;
+  padding: 10px;
+  border-radius: 4px;
+  width: 80%;
+  color: #111;
+}
+
+.login__signup__buttons > a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: black;
+}
+
+.link__to__signup {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 50px;
+  margin-top: 30px;
+  justify-content: center;
+  padding-top: 10px;
+  color: gray;
+  font-size: 12px;
+}
+
+.link__to__signup > a {
+  text-decoration: none;
+  margin-left: 5px;
+  color: blue;
+}
+
+.dropdown:hover div {
+  visibility: visible;
+  // transition: 5s;
+}
+
+.button > a {
+  text-decoration: none;
+  color: black;
+}
+
+.welcome__message__two > svg {
+  margin-left: 5px;
+  color: gray;
+}
+
+.footer__line::after {
+  display: inline-block;
+  content: "";
+  border-top: 0.3rem solid #e7e7e7;
+  width: 100%;
+  border-width: 1px;
+  margin: 0.2rem;
+  background: transparent;
+}
+
+.login__signup__buttons:hover {
+  background: linear-gradient(to bottom, #f7dfa5, #e0a512);
+  cursor: pointer;
+}
