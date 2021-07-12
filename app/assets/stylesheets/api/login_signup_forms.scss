@@ -67,6 +67,7 @@
 // .errors{
 //    padding: 25px;
 // }
+@import "typeface-lato";
 
 .outermost-login-container {
   display: flex;
@@ -101,11 +102,13 @@
 
 .login-form-header {
   font-size: 28px;
+  font-family: lato;
 }
 
 .form-descriptor {
   margin-left: 38px;
   font-size: 28px;
+  font-family: lato;
   text-align: left;
   font-weight: 400;
   font-family: "Amazon Ember", Arial, sans-serif;
@@ -118,6 +121,7 @@ li {
 li .errors {
   list-style: none;
   font-size: small;
+  font-family: lato;
   color: red;
 }
 
@@ -136,6 +140,7 @@ li .errors {
 .submit-button {
   background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
   color: black;
+  font-family: lato;
   border-style: none;
   width: 80%;
   padding-top: 8px;
@@ -155,8 +160,8 @@ li .errors {
   font-family: Arial, sans-serif;
 }
 
-.auth-container {
-}
+// .auth-container {
+// }
 
 .form-footer {
   border: solid #e1e0e0;
@@ -175,6 +180,7 @@ li .errors {
   padding-top: 5px;
   padding-top: 5px;
   padding-left: 10px;
+  font-family: lato;
   padding-right: 10px;
 }
 
@@ -187,6 +193,7 @@ li .errors {
   color: #0066c0;
   font-size: 12px;
   padding: 20px;
+  font-family: lato;
   justify-content: center;
 }
 
@@ -198,11 +205,16 @@ li .errors {
   flex-wrap: nowrap;
   color: gray;
   font-size: 12px;
+  font-family: lato;
   padding-bottom: 50px;
 }
 
 .switch-to-other-form > p {
   padding: 10px;
+}
+
+.demoUser {
+  font-family: lato;
 }
 
 .switchFormsButton {
@@ -216,6 +228,7 @@ li .errors {
   background: linear-gradient(to bottom, #f7f8fa, #e7e9ec);
   border-radius: 3px;
   border-width: 0.5px;
+  font-family: lato;
   border-color: #adb1b8 #a2a6ac #8d9096;
 }
 
@@ -228,10 +241,12 @@ li .errors {
 }
 
 .login-form-main-content p {
+  font-family: lato;
   margin-right: 255px;
 }
 
 .switch-to-other-form > p {
+  font-family: lato;
   padding: 10px;
   // font-size: 4rem;
 }

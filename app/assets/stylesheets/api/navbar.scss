@@ -14,12 +14,14 @@
 //     padding: 20px;
 //     color:white;
 // }
+@import "typeface-lato";
 
 .navbar {
   height: 60px;
   display: flex;
   align-items: center;
   background-color: #131921;
+  font-family: lato;
 }
 
 .header__logo {
@@ -62,6 +64,13 @@
   flex-direction: column;
   margin-left: 10px;
   margin-right: 10px;
+}
+
+.header__option__custom {
+  color: white;
+  display: flex;
+  flex-direction: column;
+  margin-top: 5px;
 }
 
 .header__nav {
@@ -126,17 +135,20 @@
 
 .welcome__message {
   font-size: 12px;
+  font-family: lato;
 }
 
 .link__to__login__signup > a {
   font-weight: bold;
   color: white;
+  font-family: lato;
   text-decoration: none;
 }
 
 .greeting__message {
   font-size: 12px;
   color: white;
+  font-family: lato;
 }
 
 .greeting__container {
@@ -155,6 +167,7 @@
   justify-content: space-around;
   height: 30px;
   color: white;
+  font-family: lato;
   background: #232f3e;
   align-items: center;
 }
@@ -188,9 +201,11 @@
 
 .welcome__message__one {
   font-size: 12px;
+  font-family: lato;
 }
 .welcome__message__two {
   font-size: 14px;
+  font-family: lato;
   font-weight: bold;
 }
 
@@ -199,6 +214,7 @@
   border-color: #a88734 #9c7e31 #846a29;
   border-width: 0.5px;
   padding: 10px;
+  font-family: lato;
   border-radius: 4px;
   width: 80%;
   color: #111;
@@ -207,6 +223,7 @@
 .login__signup__buttons > a {
   text-decoration: none;
   margin-left: 5px;
+  font-family: lato;
   color: black;
 }
 
@@ -220,12 +237,14 @@
   padding-top: 10px;
   color: gray;
   font-size: 12px;
+  font-family: lato;
 }
 
 .link__to__signup > a {
   text-decoration: none;
   margin-left: 5px;
   color: blue;
+  font-family: lato;
 }
 
 .dropdown:hover div {
@@ -236,11 +255,13 @@
 .button > a {
   text-decoration: none;
   color: black;
+  font-family: lato;
 }
 
 .welcome__message__two > svg {
   margin-left: 5px;
   color: gray;
+  font-family: lato;
 }
 
 .footer__line::after {

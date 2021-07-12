@@ -65,6 +65,7 @@
   align-items: center;
   background: #37475a;
   color: white;
+  font-family: lato;
 }
 
 .footer > div {
@@ -83,6 +84,7 @@
   flex-direction: row;
   justify-content: space-around;
   background: #131a22;
+  font-family: lato;
 }
 
 .footerInfo {
@@ -93,3 +95,11 @@
 // .footer > div {
 //   padding: 100px;
 // }
+
+.under__navBar {
+  padding: 5px;
+}
+
+.under__navBar > option__one {
+  margin-bottom: 5px;
+}

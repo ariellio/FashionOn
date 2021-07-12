@@ -28,7 +28,7 @@ const Navbar = () => {
                             <div className="header__option">
                                    <GreetingsContainer />
                             </div>
-                            <div className="header__option">
+                            <div className="header__option__custom">
                                    <span className="header__optionOne">
                                           Returns
                                    </span>

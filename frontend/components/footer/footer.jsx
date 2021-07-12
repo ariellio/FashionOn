@@ -12,8 +12,8 @@ class Footer extends React.Component {
         }
 
         render() {
-                return (<div className="footer">
-                        <div onClick={this.componentDidUpdate}>
+                return (<div onClick={this.componentDidUpdate} className="footer">
+                        <div>
                             Back to top
                         </div>
                     <div className="bigFooter">
