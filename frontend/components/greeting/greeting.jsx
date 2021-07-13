@@ -4,6 +4,7 @@ import { faSortDown } from '@fortawesome/free-solid-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 
 
+
 class Greeting extends React.Component{
     constructor(props){
         super(props)
@@ -15,9 +16,16 @@ class Greeting extends React.Component{
             return(
                 <div className="greeting__container">
                     <span className="greeting__message">
-                        Hello {currentUser.username}!
+                        Hello {currentUser.username}! 
+                        <FontAwesomeIcon icon={faSortDown}/>
                     </span>
-                    <button onClick={logout}> Logout</button>
+
+                    <div className="logout__container">
+                        <span>
+                            Logout Below
+                        </span>
+                            <button className="logout__button" onClick={logout}> Logout</button>                       
+                    </div>
                 </div>
             )
         } else {

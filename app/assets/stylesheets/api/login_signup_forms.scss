@@ -285,3 +285,43 @@ li .errors {
   position: relative;
   cursor: pointer;
 }
+
+.logout__container {
+  display: flex;
+  flex-direction: column;
+  background: white;
+  position: absolute;
+  margin-top: 60px;
+  height: 80px;
+  width: 180px;
+  border: solid gray;
+  border-width: 0.5px;
+  border-radius: 3px;
+  visibility: hidden;
+  transition: 1s;
+}
+
+.greeting__container:hover .logout__container {
+  visibility: visible;
+  transition: 2s;
+}
+
+.logout__button {
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 10px;
+  padding: 5px;
+  background: #febd69;
+  border-width: 0.5px;
+  border-radius: 3px;
+}
+
+.greeting__message > svg {
+  color: gray;
+  padding-left: 5px;
+}
+
+.logout__button:hover {
+  background: linear-gradient(to bottom, #f7dfa5, #f0c14b);
+  cursor: pointer;
+}

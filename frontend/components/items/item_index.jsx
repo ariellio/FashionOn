@@ -23,9 +23,11 @@ function ItemIndex({items}) {
                 return (
                     <div className="item"> 
                         <div className="item__info">
-                            <p className="item__title">
-                                    {item.name}
-                            </p>
+                            <Link to={`/items/${item.id}`}>
+                                <p className="item__title">
+                                        {item.name}
+                                </p>
+                            </Link>
                         </div>
                         <Link to={`/items/${item.id}`}>
                             {photos}
