@@ -1,11 +1,12 @@
 import { connect } from 'react-redux';
-import ItemIndex from './item_index';
+import ItemIndexPage from './item_index_page';
 import { fetchItems } from '../../actions/item_actions';
 import { selectItems } from '../../reducers/selectors_reducer';
 import { Link } from 'react-router-dom';
 import React from 'react';
 
 const mSTP = state => {
+    
     return {
         items: Object.values(state.entities.items)
     }
@@ -17,4 +18,4 @@ const mDTP = dispatch => {
     }
 }
 
-export default connect(mSTP, mDTP)(ItemIndex)
+export default connect(mSTP, mDTP)(ItemIndexPage)

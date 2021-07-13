@@ -10,5 +10,12 @@ class Item < ApplicationRecord
     has_many_attached :photos
 
 
-
+    def self.find_item(search)
+        split_search = search.split(" ")
+        searched_item = split_search.map{|char| "name ILIKE '%#{char}%'"}.join(" OR ")
+        
+        Item
+        .where(searched_item)
+    end
+        
 end

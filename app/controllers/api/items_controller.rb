@@ -11,7 +11,8 @@ class Api::ItemsController < ApplicationController
     end
 
 
-    # def item_params
-    #     params.require(:item).permit(:name)
-    # end
+    def search
+        @items = Item.find_item(params[:search])
+        render :index
+    end
 end

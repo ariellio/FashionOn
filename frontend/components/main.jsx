@@ -8,14 +8,16 @@ import SplashComponent from './navbar/navbar';
 import ItemShowContainer from './items/item_show_container';
 import Navbar from './navbar/navbar';
 import Footer from './footer/footer';
+import SearchContainer from './search/search_container'
 
 
 const Main = () => (
     <div>
         <Navbar />
         <Switch>
+            <Route path={`/items/search/nike`} component={SearchContainer} />
             <Route path="/items/:itemId" component={ItemShowContainer} />
-            <Route path="/" component={ItemIndexContainer} />
+            <Route exact path="/" component={ItemIndexContainer} />
         </Switch>
         <Footer />
     </div>

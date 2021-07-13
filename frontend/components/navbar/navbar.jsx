@@ -6,7 +6,8 @@ import { faSearch } from '@fortawesome/free-solid-svg-icons'
 import { faShoppingCart } from '@fortawesome/free-solid-svg-icons'
 import { fasSortDown } from '@fortawesome/free-solid-svg-icons'
 import Greeting from '../greeting/greeting';
-
+import search_container from './searchBar/search_bar_container';
+import Searchbar from './searchBar/search_bar_container';
 
 
 
@@ -19,10 +20,7 @@ const Navbar = () => {
                             <img className="header__logo" src="https://fashionon-seed.s3.amazonaws.com/Screen+Shot+2021-07-10+at+6.57.31+PM.png" />
                      </Link>
 
-                     <div className="header__search">
-                            <input className="header__searchInput" type="text"/>
-                            <FontAwesomeIcon className="header__searchIcon" icon={faSearch} />
-                     </div>
+                     <Searchbar/>
 
                      <div className="header__nav">
                             <div className="header__option">

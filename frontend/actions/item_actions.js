@@ -21,7 +21,7 @@ export const fetchItems = () => dispatch => {
     return ItemAPIUtil.fetchItems()
     .then(items => 
         {  
-            return dispatch(receiveItems(items))})
+        return dispatch(receiveItems(items))})
 }   
 
 export const fetchItem = itemId => dispatch => {

@@ -1,14 +1,16 @@
-.items-display-info{
-    display: flex;
-    height: 100%;
-    height: calc(100vh - 100px); 
-    justify-content: space-evenly;
- }
- 
- .item-display-info{  
-     display: flex;
-     position: relative;
-     background: gray;
-     flex-direction: column;
-     align-items: center;
- }  
+@import "typeface-lato";
+
+.items-display-info {
+  display: flex;
+  height: 100%;
+  height: calc(100vh - 100px);
+  justify-content: space-evenly;
+}
+
+.item-display-info {
+  display: flex;
+  position: relative;
+  background: gray;
+  flex-direction: column;
+  align-items: center;
+}

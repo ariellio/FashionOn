@@ -1,4 +1,5 @@
-import { RECEIVE_ALL_ITEMS, RECEIVE_ITEM } from '../actions/item_actions';
+import { RECEIVE_ALL_ITEMS, RECEIVE_ITEM  } from '../actions/item_actions';
+import { RECEIVE_SEARCH_RESULTS  } from '../actions/search_actions';
 
 
 const itemsReducer = (oldState = { }, action) => {
@@ -10,6 +11,8 @@ const itemsReducer = (oldState = { }, action) => {
             let newState = Object.assign({}, oldState)
             newState[action.item.id] =  action.item;
             return newState;
+        case RECEIVE_SEARCH_RESULTS:
+            return action.searchResults
         default:
             return oldState;
     }
