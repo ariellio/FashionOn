@@ -5,8 +5,8 @@ const ReviewsReducer = (state = {}, action) => {
     Object.freeze(state)
     
     switch (action.type) {
-        case RECEIVE_ITEM:
-           return action.reviews;
+        // case RECEIVE_ITEM:
+        //    return action.reviews;
         default:
             return state
     }

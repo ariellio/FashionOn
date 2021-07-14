@@ -64,9 +64,9 @@ class ItemShow extends React.Component {
                     </div>  
                 </div>
                 <div>
-                    <Reviews reviews={reviews}/>
-                    <CreateReviewsForm reviews={reviews}/>
-                    <Link to={`/reviews/createReview/${item.id}`}>Create Review</Link>
+                    {/* <Reviews reviews={reviews}/> */}
+                    {/* <CreateReviewsForm reviews={reviews}/> */}
+                    {/* <Link to={`/reviews/createReview/${item.id}`}>Create Review</Link> */}
                 </div>
             </div>
         )
