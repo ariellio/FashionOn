@@ -35,7 +35,7 @@ class Api::SessionsController < ApplicationController
             @item = Item.find_by(id: params[:review][:item_id])
             render "api/items/show"
         else
-            render json: @reviews.errors.full_messages, status :422
+            render json: @reviews.errors.full_messages, status: 422
         end
     end
 
