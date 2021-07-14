@@ -16,6 +16,7 @@ function ItemIndexItem({item}) {
         }
     
     return (
+        <div className="items-display-info" >
             <div className="item__row">    
                 <div className="item"> 
                     <div className="item__info">
@@ -30,6 +31,7 @@ function ItemIndexItem({item}) {
                     </Link>
                 </div>
             </div>
+        </div>
     )
 }
 
