@@ -9,9 +9,9 @@ function Reviews(props) {
         <div className="all__reviews">
             {
                 props.reviews.map( review => {
+                    debugger
                    return (<div>
                         <ReviewShow review={review} />
-                        <CreateReviewsForm review={review} />
                     </div>)
                 }
 
