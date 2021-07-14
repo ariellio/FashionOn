@@ -12,6 +12,7 @@ class Api::ItemsController < ApplicationController
 
 
     def search
+        # 
         @items = Item.find_item(params[:search])
         render :index
     end

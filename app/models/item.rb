@@ -5,12 +5,17 @@ class Item < ApplicationRecord
     # belongs_to :user,
 
     # belongs_to :category
-    has_many :reviews
+    has_many :reviews,
+        class_name: :Review,
+        foreign_key: :item_id
+        
+
     has_many :cart_items
     has_many_attached :photos
 
 
     def self.find_item(search)
+        # 
         split_search = search.split(" ")
         searched_item = split_search.map{|char| "name ILIKE '%#{char}%'"}.join(" OR ")
         

@@ -6,7 +6,7 @@ import { Link } from "react-router-dom";
 
 
 function ItemIndex({items}) {
-    debugger
+    
     return (
             <div className="item__row">    
                 {

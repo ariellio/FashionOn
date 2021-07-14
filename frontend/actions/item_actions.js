@@ -10,10 +10,12 @@ const receiveItems = items => {
     }
 }
 
-const receiveItem = item => {
+const receiveItem = ({item, reviews}) => {
+    
     return {
         type: RECEIVE_ITEM,
-        item
+        item,
+        reviews
     }
 }
 

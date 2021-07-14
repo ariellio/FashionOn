@@ -17,7 +17,6 @@ class Search extends Component {
         
         
         if (prevProps.match.params.queryString !== this.props.match.params.queryString) {
-            
             this.props.fetchSearchResults(this.props.match.params.queryString)
         }
     }

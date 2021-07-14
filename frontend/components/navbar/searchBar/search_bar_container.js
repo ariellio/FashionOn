@@ -7,7 +7,7 @@ import {fetchSearchResults} from '../../../actions/search_actions'
 
 const mSTP = (state) => {
     
-    debugger
+    
     return {
         search: state.entities.items
     }

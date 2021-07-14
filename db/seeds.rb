@@ -26,6 +26,11 @@ jeans1 = Item.create!({name: 'Art Flare Jeans', description: 'Like the snow on a
 
 
 
+review1 = Review.new({ title: "these yeezys are sooo awesome", body: "Sooooo ive always wanted these and im so happy to have finally gotten them", rating: 4})
+
+
+
+
 yeezyPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/real+yeezy.jpeg')
 yeezy.photos.attach( io: yeezyPhoto_file, filename: 'real+yeezy.jpeg')
 
@@ -63,3 +68,4 @@ jeans1.photos.attach( io: jeans1Photo_file, filename: 'jeans1.jpeg')
 
 p "Created #{User.count} users"
 p "Created #{Item.count} items"
+p "Created #{Review.count} reviews"

@@ -7,7 +7,8 @@ import { fetchItems } from '../../util/item_api_util';
 
 const mSTP = (state, ownprops) => {
     return {
-        item: state.entities.items[ownprops.match.params.itemId] 
+        item: state.entities.items[ownprops.match.params.itemId], 
+        reviews: Object.values(state.entities.reviews)
     }
 }
 

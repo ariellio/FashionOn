@@ -105,6 +105,8 @@
   border: solid gray;
   border-width: 0.5px;
   height: 25px;
+  font-family: lato;
+  color: black;
 }
 
 .item__info {
@@ -135,8 +137,6 @@
   object-fit: contain;
   flex-grow: 1;
 }
-
-
 
 // .item__container {
 //   height: 800px;

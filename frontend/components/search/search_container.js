@@ -6,17 +6,17 @@ import {fetchSearchResults} from '../../actions/search_actions'
 
 
 const mSTP = (state) => {
-    debugger
+    
+    
     return {
-        items: Object.values(state.entities.search)
+        items: Object.values(state.entities.items)
     }
 }
 
 const mDTP = dispatch => {
     return {
         fetchSearchResults: search => {
-            
-            dispatch(fetchSearchResults(search))
+            return dispatch(fetchSearchResults(search))
         }
     }
 }
