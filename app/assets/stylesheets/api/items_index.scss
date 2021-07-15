@@ -3,8 +3,7 @@
 .items-display-info {
   display: flex;
   height: 100%;
-  height: calc(100vh - 100px);
-  justify-content: space-evenly;
+  flex-wrap: wrap;
 }
 
 .item-display-info {
@@ -13,4 +12,20 @@
   background: gray;
   flex-direction: column;
   align-items: center;
+}
+
+.item__row {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  flex-shrink: 1;
+  background: white;
+  margin-bottom: 20px;
+  border: solid gray;
+  border-width: 0.5px;
+  border-radius: 3px;
 }
