@@ -34,7 +34,7 @@ class ItemShow extends React.Component {
                             {item.name}
                         </span>
                         <div className="stars__rating">
-                            ⭐️
+                            ⭐️⭐️⭐️⭐️⭐️
                         </div>
                         <div className="item__price">
                             {item.price}
