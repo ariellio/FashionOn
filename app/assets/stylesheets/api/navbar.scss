@@ -19,6 +19,7 @@
 .navbar {
   height: 60px;
   display: flex;
+  flex-shrink: 1;
   align-items: center;
   background-color: #131921;
   font-family: lato;
