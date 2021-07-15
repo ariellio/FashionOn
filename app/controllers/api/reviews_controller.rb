@@ -25,7 +25,6 @@ class Api::ReviewsController < ApplicationController
     end
 
     def destroy
-        debugger
         @review = Review.find_by(id: params[:id])
         #@item = Item.find_by(name: params[:review][:item])
 

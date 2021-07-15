@@ -6,12 +6,12 @@ const initialState = {}
 const ReviewsReducer = (state = initialState, action) => {
     Object.freeze(state)
     
-    debugger
+    
     switch (action.type) {
         case RECEIVE_ITEM:
            return action.reviews;
         case REMOVE_REVIEW:
-            debugger
+            
             let newState = Object.assign({}, state)
             delete newState[action.reviewId]
             return newState

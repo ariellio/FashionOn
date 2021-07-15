@@ -1,4 +1,7 @@
 import React from 'react';
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 export class DeleteReview extends React.Component {
     constructor(props){
@@ -7,15 +10,17 @@ export class DeleteReview extends React.Component {
     }
 
     handleSubmit(){
-        debugger
+        
         this.props.deleteReview(this.props.review.id)
     }
 
 
     render() {
-        debugger
+        
         return (
-            <button onClick={this.handleSubmit}>Delete here</button>
+            <button onClick={this.handleSubmit}>
+                <FontAwesomeIcon icon={faTrash} />
+            </button>
         )
     }
 }

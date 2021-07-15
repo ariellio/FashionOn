@@ -32,23 +32,25 @@ class ReviewsForm extends React.Component {
     render() {
     
     return (
-        <form onSubmit={this.handleSubmit}>
-            <label> Title
+        <form className="createEdit__form__container" onSubmit={this.handleSubmit}>
+            <div className="createEdit__form">
+            <label className="form__title"> Add a Headline
                 <div>
-                    <input className="review__title" value={this.state.title} type="text" onChange={this.handleUpdate('title')}/>
+                    <input className="review__title__input" value={this.state.title} type="text" onChange={this.handleUpdate('title')}/>
                 </div>
             </label>
-            <label> Description
+            <label className="body__form"> Description
                 <div>
-                    <input className="review__body" value={this.state.body} type="text" onChange={this.handleUpdate('body')}/>
+                    <textarea className="review__body__input" value={this.state.body} onChange={this.handleUpdate('body')}/>
                 </div>
             </label>
             <label> Rating
                 <div>
-                    <input className="review__body" value={this.state.rating} type="number" onChange={this.handleUpdate('rating')}/>
+                    <input className="review__rating__input" value={this.state.rating} type="number" onChange={this.handleUpdate('rating')}/>
                 </div>
             </label>
             <button onChange={this.handleSubmit}>Submit</button>
+            </div>
         </form>
         )
     }

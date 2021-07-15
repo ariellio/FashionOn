@@ -1,0 +1,131 @@
+.review__container {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.allReviews__container {
+  border: solid;
+  width: 60%;
+  height: 600px;
+  padding: 50px;
+}
+
+.allReviews {
+  //   flex-grow: 1;
+  padding: 10px;
+  border: solid;
+  margin-bottom: 25px;
+}
+
+.showPage__createReview__button {
+  background: white;
+  border-width: 0.5px;
+  width: 100%;
+  border-radius: 5px;
+  padding: 5px;
+}
+
+.showPage__createReview__button > a {
+  text-decoration: none;
+  color: black;
+}
+
+.showPage__createReview__container {
+  height: 150px;
+}
+
+.review__content {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  padding-bottom: 20px;
+}
+
+.showPage__review__content > h3 {
+  font-weight: bold;
+  padding: 10px;
+  font-size: large;
+}
+
+.showPage__review__content > p {
+  padding-bottom: 20px;
+}
+
+.createEdit__form__container {
+  display: flex;
+  justify-content: center;
+  padding: 20px;
+  border: solid;
+}
+
+.createEdit__form {
+  border: solid;
+  height: 300px;
+  width: 500px;
+  align-items: center;
+  justify-content: center;
+  padding: 50px;
+}
+
+.form__title {
+  font-weight: bold;
+  font-size: x-large;
+  text-align: start;
+}
+
+.form__title > div {
+  padding-bottom: 20px;
+  padding-top: 10px;
+}
+
+.review__title__input {
+  width: 100%;
+}
+
+.body__form {
+  font-weight: bold;
+  font-size: x-large;
+}
+
+.body__form > div {
+  padding-top: 10px;
+}
+
+.review__body__input {
+  height: 50px;
+  width: 100%;
+}
+
+.createEdit__form > button {
+  flex-grow: 1;
+  margin-left: 400px;
+  margin-top: 75px;
+}
+
+.review__details > username {
+  padding: 5px;
+}
+
+.username > svg {
+  padding-right: 5px;
+}
+
+.review__details > .review__title {
+  padding: 5px;
+}
+.review__details > .review__title {
+  padding: 5px;
+}
+.review__details > .review__body {
+  padding: 5px;
+}
+
+.review__body {
+  margin: 0px;
+  width: 626px;
+  height: 61px;
+  border: none;
+  resize: none;
+  color: black;
+  background: white;
+}

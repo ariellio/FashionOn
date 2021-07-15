@@ -16,7 +16,7 @@ class ItemShow extends React.Component {
     }
         
     render() {
-        const {item, reviews, deleteReview} = this.props
+        const {item, reviews, deleteReview, user} = this.props
         //render photos if there are photos
         if (item === undefined) return null;
         return (
@@ -65,10 +65,16 @@ class ItemShow extends React.Component {
                         </p>
                     </div>  
                 </div>
-                <div>
-                    <Reviews reviews={reviews} deleteReview={deleteReview}/>
+                <div className="review__container">
+                    <div className="showPage__createReview__container">
+                        <div className="showPage__review__content">
+                            <h3>Review this product</h3>
+                            <p>Share your thoughts with other customers</p>
+                            <button className="showPage__createReview__button"><Link to={`/reviews/createReview/${item.id}`}>Write a Customer Review</Link> </button>
+                        </div>
+                    </div>
+                    <Reviews reviews={reviews} deleteReview={deleteReview} current_user={user}/>
                     {/* <CreateReviewsForm reviews={reviews}/> */}
-                    <Link to={`/reviews/createReview/${item.id}`}>Create Review</Link>
                     {/* <Link to={`/reviews/createReview/${item.id}`}>Edit Review</Link> */}
                 </div>
             </div>
