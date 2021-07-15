@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Reviews from '../reviews/reviews_index';
-import CreateReviews from '../reviews/create_reviews_form';
-import CreateReviewsForm from '../reviews/create_reviews_form';
+import CreateReviews from '../reviews/reviews_form';
+import CreateReviewsForm from '../reviews/reviews_form';
+import DeleteReview from '../reviews/delete_review';
 
 class ItemShow extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ItemShow extends React.Component {
     }
         
     render() {
-        const {item, reviews} = this.props
+        const {item, reviews, deleteReview} = this.props
         //render photos if there are photos
         if (item === undefined) return null;
         return (
@@ -60,13 +61,15 @@ class ItemShow extends React.Component {
                         <p>Thank you for shopping at FashionOn</p>
                         <p className="bottom__line">
                             
+                        {/* <DeleteReview review={reviews} deleteReview={deleteReview}/> */}
                         </p>
                     </div>  
                 </div>
                 <div>
-                    <Reviews reviews={reviews}/>
+                    <Reviews reviews={reviews} deleteReview={deleteReview}/>
                     {/* <CreateReviewsForm reviews={reviews}/> */}
                     <Link to={`/reviews/createReview/${item.id}`}>Create Review</Link>
+                    {/* <Link to={`/reviews/createReview/${item.id}`}>Edit Review</Link> */}
                 </div>
             </div>
         )

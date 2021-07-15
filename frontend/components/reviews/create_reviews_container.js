@@ -1,23 +1,29 @@
 import React from 'react'
 import { connect } from 'react-redux'
-import CreateReviewsForm from './create_reviews_form'
+import ReviewsForm from './reviews_form'
 import {createReview} from '../../actions/review_actions' 
 
 
 
-const mSTP = (state) => {    
+const mSTP = (state, ownprops) => {   
+    // debugger 
     return {
-        review: state.entities.reviews
+        review: {
+            title: "",
+            body: "",
+            rating: 0,
+            item_id: ownprops.match.params.itemId
+        }
     }
 }
 
 const mDTP = dispatch => {
     return {
-        createReview: review => {
-            debugger
-            dispatch(createReview(review))
+        action: review => {
+            // debugger
+            return dispatch(createReview(review))
         }
     }
 }
 
-export default connect(mSTP, mDTP)(CreateReviewsForm)
+export default connect(mSTP, mDTP)(ReviewsForm)

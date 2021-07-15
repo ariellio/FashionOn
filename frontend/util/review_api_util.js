@@ -1,23 +1,24 @@
 
 export const createReview = (review) => {
     return $.ajax({
-        url: '/api/reviews',
+        url: `/api/items/${review.item_id}/reviews`,
         method: 'POST',
         data: {review}
     })
 }
 
-export const deleteReview = (review) => {
+export const deleteReview = (reviewId) => {
+    debugger
     return $.ajax({
-        url: `/api/reviews/${review.id}`,
-        method: 'DESTROY',
-        data: { review }
+        url: `/api/reviews/${reviewId}`,
+        method: 'DELETE'
+        // data: { review }
     })
 }
 
 export const updateReview = review => {
     return $.ajax({
-        url: `/api/reviews/:id`,
+        url: `/api/reviews/${review.id}`,
         method: 'PATCH',
         data: { review }
     })

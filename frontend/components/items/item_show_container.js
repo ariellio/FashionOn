@@ -4,6 +4,7 @@ import { fetchItem } from '../../actions/item_actions';
 import { Link } from 'react-router-dom';
 import React from 'react';
 import { fetchItems } from '../../util/item_api_util';
+import {deleteReview} from '../../actions/review_actions';
 
 const mSTP = (state, ownprops) => {
     return {
@@ -15,6 +16,7 @@ const mSTP = (state, ownprops) => {
 const mDTP = dispatch => {
     return {
         fetchItem: (itemId) => dispatch(fetchItem(itemId)),
+        deleteReview: reviewId => dispatch(deleteReview(reviewId))
     }
 }
 
