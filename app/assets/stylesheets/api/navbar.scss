@@ -25,6 +25,10 @@
   font-family: lato;
 }
 
+.searchBar__container {
+  flex-grow: 1;
+}
+
 .header__logo {
   width: 100px;
   object-fit: contain;

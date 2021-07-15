@@ -35,7 +35,7 @@ class Searchbar extends Component {
     render() {
         
         return (
-            <div>
+            <div className="searchBar__container">
                 <div className="header__search" onSubmit={this.handleSubmit}>
                             <input className="header__searchInput" value={this.state.search} type="text" onChange={this.handleInput}/>
                                 <FontAwesomeIcon onClick={this.handleSubmit} className="header__searchIcon" icon={faSearch} />
