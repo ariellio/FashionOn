@@ -7,7 +7,6 @@ import { fetchItems } from '../../util/item_api_util';
 import {deleteReview} from '../../actions/review_actions';
 
 const mSTP = (state, ownprops) => {
-    debugger
     return {
         item: state.entities.items[ownprops.match.params.itemId], 
         reviews: Object.values(state.entities.reviews),

@@ -7,7 +7,6 @@ import { fetchReview } from '../../util/review_api_util'
 
 
 const mSTP = (state, ownProps) => {   
-    // debugger 
     return {
         review: state.entities.reviews[ownProps.match.params.reviewId]
     }
@@ -16,7 +15,6 @@ const mSTP = (state, ownProps) => {
 const mDTP = dispatch => {
     return {
         action: review => {
-            // debugger
             return dispatch(updateReview(review))
         },
         fetchReview: reviewId => dispatch(fetchReview(reviewId))

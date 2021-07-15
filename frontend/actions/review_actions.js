@@ -6,7 +6,6 @@ export const RECEIVE_REVIEW = 'RECEIVE_REVIEW'
 export const REMOVE_REVIEW = 'REMOVE_REVIEW'
 
 export const receive_review = review => {
-    debugger
     return {
         type: RECEIVE_REVIEW,
         review
@@ -48,7 +47,6 @@ export const updateReview = review => dispatch => {
 }
 
 export const deleteReview = reviewId => dispatch => {
-    debugger
     return ReviewApiUtil.deleteReview(reviewId)
     .then( () => dispatch(remove_review(reviewId)))
 }

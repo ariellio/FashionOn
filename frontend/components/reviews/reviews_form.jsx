@@ -9,7 +9,6 @@ class ReviewsForm extends React.Component {
         this.state =  this.props.review
         this.handleSubmit = this.handleSubmit.bind(this)
         this.handleUpdate = this.handleUpdate.bind(this)
-        // debugger
     }
     
     handleSubmit(e){
@@ -25,7 +24,6 @@ class ReviewsForm extends React.Component {
     }
 
     handleUpdate(field){
-        // debugger
         return e => this.setState({[field]: e.currentTarget.value})
     }
     

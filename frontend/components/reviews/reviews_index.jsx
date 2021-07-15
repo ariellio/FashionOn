@@ -2,9 +2,7 @@ import React from 'react'
 import ReviewShow from './review_show'
 
 function Reviews(props) {
-    debugger
     if (props.reviews.length === 0) return null
-    // debugger
         return ( 
         <div className="allReviews__container">
             {

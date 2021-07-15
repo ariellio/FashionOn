@@ -6,14 +6,12 @@ class Api::ItemsController < ApplicationController
     end
 
     def show
-       # debugger
         @item = Item.find(params[:id])
         render :show
     end
 
 
     def search
-        # 
         @items = Item.find_item(params[:search])
         render :index
     end

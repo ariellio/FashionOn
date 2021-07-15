@@ -6,7 +6,6 @@ import {createReview} from '../../actions/review_actions'
 
 
 const mSTP = (state, ownprops) => {   
-    // debugger 
     return {
         review: {
             title: "",
@@ -20,7 +19,6 @@ const mSTP = (state, ownprops) => {
 const mDTP = dispatch => {
     return {
         action: review => {
-            // debugger
             return dispatch(createReview(review))
         }
     }

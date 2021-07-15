@@ -11,7 +11,6 @@ class Api::ReviewsController < ApplicationController
         render :show
     end
     def create 
-        #debugger
         @review = Review.new(review_params)
         @review.author_id = current_user.id
 
@@ -37,7 +36,6 @@ class Api::ReviewsController < ApplicationController
 
     def update 
         @review = Review.find_by(id: params[:id])
-        #debugger
         if @review.update(review_params)
             #nice job!
            # @item = Item.find_by(id: params[:review][:item_id])

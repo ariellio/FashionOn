@@ -10,7 +10,6 @@ import { faEdit } from '@fortawesome/free-solid-svg-icons'
 function ReviewShow({review, deleteReview, current_user}) {
 
 
-    debugger
     if (current_user[review.author_id] &&  current_user[review.author_id].id === review.author_id){
         return (
             <div className="single__review">

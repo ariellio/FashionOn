@@ -12,7 +12,6 @@ const receiveItems = items => {
 
 const receiveItem = ({item, reviews}) => {
     reviews ||= {}
-    debugger
     return {
         type: RECEIVE_ITEM,
         item,
