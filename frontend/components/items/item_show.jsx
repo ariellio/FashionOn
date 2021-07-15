@@ -65,12 +65,6 @@ class ItemShow extends React.Component {
                         </p>
                     </div>  
                 </div>
-<<<<<<< HEAD
-                <div>
-                    {/* <Reviews reviews={reviews}/> */}
-                    {/* <CreateReviewsForm reviews={reviews}/> */}
-                    {/* <Link to={`/reviews/createReview/${item.id}`}>Create Review</Link> */}
-=======
                 <div className="review__container">
                     <div className="showPage__createReview__container">
                         <div className="showPage__review__content">
@@ -82,7 +76,6 @@ class ItemShow extends React.Component {
                     <Reviews reviews={reviews} deleteReview={deleteReview} current_user={user}/>
                     {/* <CreateReviewsForm reviews={reviews}/> */}
                     {/* <Link to={`/reviews/createReview/${item.id}`}>Edit Review</Link> */}
->>>>>>> reviews
                 </div>
             </div>
         )

@@ -7,7 +7,6 @@ Rails.application.routes.draw do
     resources :reviews, only: [:destroy, :show, :update]
     # resources :items, only: [:index, :show]
 
-<<<<<<< HEAD
     # get "/items/title/reviews", to: "reviews#index"
 
     get "/items/search", to: "items#search"
@@ -16,14 +15,6 @@ Rails.application.routes.draw do
       resources :reviews, only: [:index, :create]
     end
 
-=======
-   #get "/items/title/reviews", to: "reviews#index"
-
-    get "/items/search", to: "items#search"
-    resources :items, only: [:show, :index] do
-      resources :reviews, only: [:create, :index]
-    end
->>>>>>> reviews
   end
   
   

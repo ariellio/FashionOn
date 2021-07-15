@@ -8,10 +8,6 @@ const ReviewsReducer = (state = initialState, action) => {
     
     
     switch (action.type) {
-<<<<<<< HEAD
-        // case RECEIVE_ITEM:
-        //    return action.reviews;
-=======
         case RECEIVE_ITEM:
            return action.reviews;
         case REMOVE_REVIEW:
@@ -19,7 +15,6 @@ const ReviewsReducer = (state = initialState, action) => {
             let newState = Object.assign({}, state)
             delete newState[action.reviewId]
             return newState
->>>>>>> reviews
         default:
             return state
     }
