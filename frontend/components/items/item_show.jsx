@@ -44,7 +44,7 @@ class ItemShow extends React.Component {
                             <button className="size__button">Black</button>
                         </div>
                         <div className="item__description">
-                            {item.description}
+                           <li> {item.description}</li> 
                         </div>
 
                     </div>
@@ -65,6 +65,7 @@ class ItemShow extends React.Component {
                         </p>
                     </div>  
                 </div>
+                <div className="line__break"></div>
                 <div className="review__container">
                     <div className="showPage__createReview__container">
                         <div className="showPage__review__content">
