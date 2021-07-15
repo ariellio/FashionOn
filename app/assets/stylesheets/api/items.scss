@@ -141,3 +141,16 @@
 //   height: 800px;
 //   display: flex;
 // }
+
+.itemIndex__container {
+  display: flex;
+  padding: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+  z-index: 1;
+  margin-left: 5px;
+  margin-right: 5px;
+  flex-basis: 1500px;
+  flex-grow: 0;
+  flex-shrink: 0;
+}

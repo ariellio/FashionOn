@@ -8,7 +8,7 @@ import ItemIndexItem from './item_index_item';
 
 function ItemIndex({items}) {
     return (
-            <div>    
+            <div className="itemIndex__container">    
                 {items.map( item => <ItemIndexItem key={item.id} item={item} />)}
             </div>
     )
