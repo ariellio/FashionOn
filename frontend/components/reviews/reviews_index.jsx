@@ -1,17 +1,16 @@
 import React from 'react'
-import CreateReviewsForm from './create_reviews_form'
 import ReviewShow from './review_show'
 
 function Reviews(props) {
-    if (props.reviews.length === 0) return null
     debugger
+    if (props.reviews.length === 0) return null
+    // debugger
         return ( 
-        <div className="all__reviews">
+        <div className="allReviews__container">
             {
                 props.reviews.map( review => {
-                   return (<div>
-                        <ReviewShow review={review} />
-                        <CreateReviewsForm review={review} />
+                   return (<div className="allReviews">
+                        <ReviewShow review={review} deleteReview={props.deleteReview} current_user={props.current_user}/>
                     </div>)
                 }
 

@@ -1,7 +1,6 @@
 class Review < ApplicationRecord 
 
-    validates :title, presence: true
-    validates :body, :rating, presence: true
+    validates :title,:body, :rating, presence: true
 
     def self.find_reviews(item_title)
         Review.includes(:item)
@@ -11,7 +10,7 @@ class Review < ApplicationRecord
 
 
 
-    belongs_to :items,
+    belongs_to :item,
         class_name: :Item,
         foreign_key: :item_id
 

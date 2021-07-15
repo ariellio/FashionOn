@@ -1,0 +1,28 @@
+import React from 'react';
+import { faEdit } from '@fortawesome/free-solid-svg-icons'
+import { faTrash } from '@fortawesome/free-solid-svg-icons'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+
+export class DeleteReview extends React.Component {
+    constructor(props){
+        super(props)
+        this.handleSubmit = this.handleSubmit.bind(this)
+    }
+
+    handleSubmit(){
+        
+        this.props.deleteReview(this.props.review.id)
+    }
+
+
+    render() {
+        
+        return (
+            <button onClick={this.handleSubmit}>
+                <FontAwesomeIcon icon={faTrash} />
+            </button>
+        )
+    }
+}
+
+export default DeleteReview

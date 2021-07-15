@@ -1,8 +1,9 @@
 import React from 'react';
 import { Link } from "react-router-dom";
 import Reviews from '../reviews/reviews_index';
-import CreateReviews from '../reviews/create_reviews_form';
-import CreateReviewsForm from '../reviews/create_reviews_form';
+import CreateReviews from '../reviews/reviews_form';
+import CreateReviewsForm from '../reviews/reviews_form';
+import DeleteReview from '../reviews/delete_review';
 
 class ItemShow extends React.Component {
     constructor(props) {
@@ -15,7 +16,7 @@ class ItemShow extends React.Component {
     }
         
     render() {
-        const {item, reviews} = this.props
+        const {item, reviews, deleteReview, user} = this.props
         //render photos if there are photos
         if (item === undefined) return null;
         return (
@@ -33,7 +34,7 @@ class ItemShow extends React.Component {
                             {item.name}
                         </span>
                         <div className="stars__rating">
-                            ⭐️
+                            ⭐️⭐️⭐️⭐️⭐️
                         </div>
                         <div className="item__price">
                             {item.price}
@@ -60,13 +61,28 @@ class ItemShow extends React.Component {
                         <p>Thank you for shopping at FashionOn</p>
                         <p className="bottom__line">
                             
+                        {/* <DeleteReview review={reviews} deleteReview={deleteReview}/> */}
                         </p>
                     </div>  
                 </div>
+<<<<<<< HEAD
                 <div>
                     {/* <Reviews reviews={reviews}/> */}
                     {/* <CreateReviewsForm reviews={reviews}/> */}
                     {/* <Link to={`/reviews/createReview/${item.id}`}>Create Review</Link> */}
+=======
+                <div className="review__container">
+                    <div className="showPage__createReview__container">
+                        <div className="showPage__review__content">
+                            <h3>Review this product</h3>
+                            <p>Share your thoughts with other customers</p>
+                            <button className="showPage__createReview__button"><Link to={`/reviews/createReview/${item.id}`}>Write a Customer Review</Link> </button>
+                        </div>
+                    </div>
+                    <Reviews reviews={reviews} deleteReview={deleteReview} current_user={user}/>
+                    {/* <CreateReviewsForm reviews={reviews}/> */}
+                    {/* <Link to={`/reviews/createReview/${item.id}`}>Edit Review</Link> */}
+>>>>>>> reviews
                 </div>
             </div>
         )

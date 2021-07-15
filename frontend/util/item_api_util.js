@@ -5,6 +5,7 @@ export const fetchItems = () => {
     })
 }
 export const fetchItem = itemId => {
+    
     return $.ajax({
         url: `/api/items/${itemId}`,
         method: 'GET'

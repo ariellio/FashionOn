@@ -1,4 +1,4 @@
-class Api::SessionsController < ApplicationController
+class Api::ReviewsController < ApplicationController
     before_action :ensure_logged_in, except: [:index]
 
     def index
@@ -11,12 +11,13 @@ class Api::SessionsController < ApplicationController
         render :show
     end
     def create 
+        #debugger
         @review = Review.new(review_params)
         @review.author_id = current_user.id
 
         if @review.save
-            @item = Item.find_by(id: params[:review][:item_id])
-            render "api/item/show"
+            #@item = Item.find_by(id: params[:review][:item_id])
+            #render "api/item/show"
         else
 
             render json: @review.errors.full_messages, status: 422
@@ -24,16 +25,23 @@ class Api::SessionsController < ApplicationController
     end
 
     def destroy
-        @review = Review.find_by(id: params[:id]).destroy
-        @item = Item.find_by(name: params[:review][:item])
-        render "api/items/show"
+        @review = Review.find_by(id: params[:id])
+        #@item = Item.find_by(name: params[:review][:item])
+
+        if @review.destroy
+            
+        else
+            render json: @review.errors.full_messages, status: 422
+        end
     end
 
     def update 
         @review = Review.find_by(id: params[:id])
+        #debugger
         if @review.update(review_params)
-            @item = Item.find_by(id: params[:review][:item_id])
-            render "api/items/show"
+            #nice job!
+           # @item = Item.find_by(id: params[:review][:item_id])
+            #render "api/items/show"
         else
             render json: @reviews.errors.full_messages, status: 422
         end

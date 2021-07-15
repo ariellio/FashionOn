@@ -6,6 +6,7 @@ class Api::ItemsController < ApplicationController
     end
 
     def show
+       # debugger
         @item = Item.find(params[:id])
         render :show
     end
