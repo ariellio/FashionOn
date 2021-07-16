@@ -105,6 +105,10 @@
   font-family: lato;
 }
 
+.login-form-header > li {
+  list-style: none;
+}
+
 .form-descriptor {
   margin-left: 38px;
   font-size: 28px;
@@ -116,10 +120,10 @@
 }
 
 li {
-  list-style: none;
+  list-style: disc;
 }
 li .errors {
-  list-style: none;
+  list-style: none !important;
   font-size: small;
   font-family: lato;
   color: red;

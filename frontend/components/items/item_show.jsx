@@ -40,7 +40,7 @@ class ItemShow extends React.Component {
                             ⭐️⭐️⭐️⭐️⭐️
                         </div>
                         <div className="item__price">
-                            {item.price}
+                            <span className="price__tag">Price:</span> ${item.price}
                         </div>
                         <div className="option__buttons">
                             <button className="color__button">
@@ -54,10 +54,8 @@ class ItemShow extends React.Component {
                                 <FontAwesomeIcon icon={faCaretDown}/>
                             </button>
                         </div>
-                        <div className="item__description">
-                           <li> {item.description}</li> 
-                        </div>
-
+                        <div className="item__description" dangerouslySetInnerHTML={ {__html: item.description}} />
+                           {/* <li> {item.description}</li>  */}
                     </div>
                     <div className="add__to__cart">
                         <h3 className="text__checkout">

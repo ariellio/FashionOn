@@ -13,16 +13,86 @@ trial1 = User.create(username: 'YoyoHak360', password: 'letsgetit1')
 # s = User.create(username: 'JoeyGordo', password: 'cityboyz')
 # q = User.create(username: 'CatnessEverdeen', password: 'actactact')
 
-yeezy = Item.create!({ name: 'Yeezys', description: 'Yeezus has blessed us today with this new pair...', price: 700, category_id: 3, })
-noahHoodie = Item.create!({name: 'Noah Hoodie', description: 'Since time immemorial hoodies have been a sacred...', price: 360, category_id: 5, })
-jordans = Item.create!({name: 'Air Jordans', description: 'The airline that never was, these stylish...', price: 289, category_id: 3, })
-airMax = Item.create!({name: 'Nike Kicks', description: 'Like the snow on a winters day these new...', price: 767, category_id: 3, })
-goldHoodie = Item.create!({name: 'Gold Hoodie', description: 'Like the snow on a winters day these new...', price: 767, category_id: 3, })
-benandJerryHoodie = Item.create!({name: 'Ben&Jerry Hoodie', description: 'Like the snow on a winters day these new...', price: 767, category_id: 3, })
-stussyHoodie = Item.create!({name: 'Stuss Hoodie', description: 'Like the snow on a winters day these new...', price: 767, category_id: 3, })
-jeans = Item.create!({name: 'Classically Ripped Jeans', description: 'Like the snow on a winters day these new...', price: 767, category_id: 3, })
-jeans1 = Item.create!({name: 'Art Flare Jeans', description: 'Like the snow on a winters day these new...', price: 767, category_id: 3, })
-# jeans2 = Item.create!({name: 'Artistaclly Flared Jeans', description: 'Like the snow on a winters day these new...', price: 767, category_id: 3, })
+yeezy = Item.create!({ name: 'Yeezys', 
+description: "<ul>
+    <li> Minimalist construction.  </li>
+    <li> The shoe's upper is built with Primeknit, finished in black and highlighted by the SPLY-350 branding on the side wall</li>
+    <li> Underfoot, a full-length Boost midsole wrapped in a black rubber cage provides cushioning </li>
+    <li>  A rubber outsole with cutouts provides traction. </li>
+</ul>", price: '700.25', category_id: 3, })
+
+noahHoodie = Item.create!({name: 'Noah Hoodie', 
+description: "<ul>
+<li> Made in Canada.  </li>
+<li> 100% cotton, 9 oz. brushed-back fleece.</li>
+<li> Embroidered appliqué logo on front. </li>
+<li>  A rubber outsole with cutouts provides traction. </li>
+</ul>",
+price: 360.43, category_id: 5, })
+
+jordans = Item.create!({name: 'Air Jordans', 
+description: "<ul>
+<li> Inspired by the original Air Jordan</li>
+<li> Combines the iconic look of the original with a fit and feel that's been retooled for lightweight, all-day comfort  </li>
+<li> Tuned for comfort and built to keep up with their fast-paced play. </li>
+</ul>", 
+price: 289.75, category_id: 3, })
+
+airMax = Item.create!({name: 'Nike Kicks', 
+description: "<ul>
+<li> Inspired by the early 2000s look, the Air Max Genome adds a fresh face to the Air Max house.</li>
+<li> Adds comfort to match its sleek design that's sure to become your new favorite Air Max. </li>
+<li> This product is made with at least 20% recycled materials by weight. </li>
+</ul>",  
+price: 235.43, category_id: 3, })
+
+goldHoodie = Item.create!({name: 'Gold Hoodie', 
+description: "<ul>
+<li> Fresh material made fresh for you</li>
+<li> Made out of corinthian silks </li>
+<li> 100% organic </li>
+</ul>", 
+price: 834.45, category_id: 3, })
+
+benandJerryHoodie = Item.create!({name: 'Ben&Jerry Hoodie', 
+description:  "<ul>
+<li> Your favorite cartoon characters are here</li>
+<li> Finest comfy fabric </li>
+<li> Easy to clean </li>
+</ul>", 
+price: 245.99, category_id: 3, })
+
+stussyHoodie = Item.create!({name: 'Stuss Hoodie', 
+description: "<ul>
+<li> Your classic skater brand</li>
+<li> Newest fabrics just for you </li>
+<li> Very comfortable </li>
+</ul>", 
+price: 834.76, category_id: 3, })
+
+jeans = Item.create!({name: 'Classically Ripped Jeans', 
+description:"<ul>
+<li> Your classic skater jeans</li>
+<li> Very comfortable </li>
+<li> Stretchable in the wash </li>
+</ul>", 
+price: 401.99, category_id: 3, })
+
+jeans1 = Item.create!({name: 'Art Flare Jeans', 
+description: "<ul>
+<li> Stand out with these outlandish slacks</li>
+<li> Be prepared to be unprepared in these </li>
+<li> Stretchable in the wash </li>
+</ul>", 
+price: 767.11, category_id: 3, })
+
+jeans2 = Item.create!({name: 'Artistaclly Flared Jeans', 
+description: "<ul>
+<li> Stand out with these outlandish slacks</li>
+<li> We give Andy Warhol a run for his money </li>
+<li> Stretchable in the wash </li>
+</ul>", 
+price: 767.38, category_id: 3, })
 
 
 
@@ -58,8 +128,8 @@ jeans.photos.attach( io: jeansPhoto_file, filename: 'real+white+jeans.jpeg')
 jeans1Photo_file = open('https://fashionon-seed.s3.amazonaws.com/jeans1.jpeg')
 jeans1.photos.attach( io: jeans1Photo_file, filename: 'jeans1.jpeg')
 
-# jeans2Photo_file = open('https://fashionon-seed.s3.amazonaws.com/jeans2.jpg')
-# jeans2.photos.attach( io: jeans2Photo_file, filename: 'jeans2.jpg')
+jeans2Photo_file = open('https://fashionon-seed.s3.amazonaws.com/jeans2.jpg')
+jeans2.photos.attach( io: jeans2Photo_file, filename: 'jeans2.jpg')
 
 
 

@@ -55,11 +55,11 @@
   display: flex;
   justify-content: center;
   padding: 20px;
-  border: solid;
+  //   border: solid;
 }
 
 .createEdit__form {
-  border: solid;
+  //   border: solid;
   height: 300px;
   width: 500px;
   align-items: center;
@@ -147,5 +147,9 @@
 }
 
 .star-cb-group:hover {
+  cursor: pointer;
+}
+
+.createEdit__form > button:hover {
   cursor: pointer;
 }
