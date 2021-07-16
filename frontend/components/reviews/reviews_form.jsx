@@ -1,6 +1,7 @@
 import React from 'react'
 import { fetchReviews } from '../../actions/review_actions'
-
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faStar } from '@fortawesome/free-solid-svg-icons'
 
 
 class ReviewsForm extends React.Component {
@@ -43,8 +44,17 @@ class ReviewsForm extends React.Component {
                 </div>
             </label>
             <label> Rating
+                {/* <div>
+                    <input className="review__rating__input" value={this.state.rating} type="radio" onChange={this.handleUpdate('rating')}/>
+                </div> */}
                 <div>
-                    <input className="review__rating__input" value={this.state.rating} type="number" onChange={this.handleUpdate('rating')}/>
+                    {/* <input className="review__rating__input" value={this.state.rating} type="radio" onChange={this.handleUpdate('rating')}/> */}
+                    <span className="star-cb-group">
+                    <input type="radio" id="rating-4" name="rating" value={this.state.rating} /><label><FontAwesomeIcon icon={faStar}/></label>
+                    <input type="radio" id="rating-3" name="rating" value={this.state.rating} /><label htmlFor="rating-3"><FontAwesomeIcon icon={faStar}/></label>
+                    <input type="radio" id="rating-2" name="rating" value={this.state.rating} /><label htmlFor="rating-2"><FontAwesomeIcon icon={faStar}/></label>
+                    <input type="radio" id="rating-1" name="rating" value={this.state.rating} /><label htmlFor="rating-1"><FontAwesomeIcon icon={faStar}/></label>
+                    </span>
                 </div>
             </label>
             <button onChange={this.handleSubmit}>Submit</button>

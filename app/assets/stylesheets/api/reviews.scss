@@ -129,3 +129,23 @@
   color: black;
   background: white;
 }
+
+// @import "compass/css3";
+
+// $unchecked-star: "\2606";
+// $unchecked-color: #888;
+// $checked-star: "\2605";
+// $checked-color: #e52;
+.star-cb-group {
+  display: inline-block;
+  overflow: hidden;
+  color: #febd69;
+}
+
+.star-cb-group input {
+  visibility: hidden;
+}
+
+.star-cb-group:hover {
+  cursor: pointer;
+}

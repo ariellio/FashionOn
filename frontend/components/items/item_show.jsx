@@ -4,6 +4,9 @@ import Reviews from '../reviews/reviews_index';
 import CreateReviews from '../reviews/reviews_form';
 import CreateReviewsForm from '../reviews/reviews_form';
 import DeleteReview from '../reviews/delete_review';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
+ 
 
 class ItemShow extends React.Component {
     constructor(props) {
@@ -40,8 +43,16 @@ class ItemShow extends React.Component {
                             {item.price}
                         </div>
                         <div className="option__buttons">
-                            <button className="color__button">Black</button>
-                            <button className="size__button">Black</button>
+                            <button className="color__button">
+                                Color 
+                                <br />
+                                <FontAwesomeIcon icon={faCaretDown}/>
+                            </button>
+                            <button className="size__button">
+                                Size
+                                <br />
+                                <FontAwesomeIcon icon={faCaretDown}/>
+                            </button>
                         </div>
                         <div className="item__description">
                            <li> {item.description}</li> 
