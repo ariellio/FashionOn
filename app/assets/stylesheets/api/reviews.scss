@@ -4,7 +4,7 @@
 }
 
 .allReviews__container {
-  border: solid;
+  //   border: solid;
   width: 60%;
   height: 600px;
   padding: 50px;
@@ -13,7 +13,7 @@
 .allReviews {
   //   flex-grow: 1;
   padding: 10px;
-  border: solid;
+  //   border: solid;
   margin-bottom: 25px;
 }
 
@@ -152,4 +152,41 @@
 
 .createEdit__form > button:hover {
   cursor: pointer;
+}
+
+.review__options {
+  display: flex;
+  float: right;
+  margin-top: -130px;
+}
+
+.review__options > div:hover > .popup__before__delete {
+  visibility: visible;
+  transition: 0.5s;
+}
+
+.review__options > a {
+  padding-right: 10px;
+}
+
+.icon__edit {
+  color: black;
+}
+
+.delete__button:hover {
+  cursor: pointer;
+}
+
+.popup__before__delete {
+  padding: 10px;
+  border: solid black;
+  margin-top: 20px;
+  position: absolute;
+  margin-left: -100px;
+  border-width: 0.5px;
+  color: #b12704;
+  border-radius: 3px;
+  margin-right: 15px;
+  visibility: hidden;
+  transition: 0.5s;
 }

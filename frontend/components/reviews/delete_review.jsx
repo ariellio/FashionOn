@@ -18,9 +18,15 @@ export class DeleteReview extends React.Component {
     render() {
         
         return (
-            <button onClick={this.handleSubmit}>
-                <FontAwesomeIcon icon={faTrash} />
-            </button>
+            <div>
+                <button className="delete__button" onClick={this.handleSubmit}>
+                    <FontAwesomeIcon icon={faTrash}/>
+                </button>
+                    <div className="popup__before__delete">
+                        This will permanently delete your comment
+                    </div>
+
+            </div>
         )
     }
 }

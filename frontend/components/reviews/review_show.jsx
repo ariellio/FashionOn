@@ -30,7 +30,7 @@ function ReviewShow({review, deleteReview, current_user}) {
                 </div>
                 <div className="review__options">
                     <Link to={`/reviews/${review.id}/edit`}> 
-                        <FontAwesomeIcon icon={faEdit} />
+                        <FontAwesomeIcon icon={faEdit} className="icon__edit"/>
                     </Link>
                     <DeleteReview review={review} deleteReview={deleteReview}/>
                 </div>
