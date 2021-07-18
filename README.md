@@ -1,6 +1,6 @@
 # FashionOn
 
-View FashionOn
+View FashionOn[google.com]
 
 # Background
 
