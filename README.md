@@ -1,6 +1,6 @@
 # FashionOn
 
-View FashionOn[google.com]
+View [FashionOn](https://fashionon-app.herokuapp.com/)
 
 # Background
 
