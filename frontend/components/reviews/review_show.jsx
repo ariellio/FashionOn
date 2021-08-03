@@ -14,9 +14,6 @@ function ReviewShow({review, deleteReview, current_user}) {
         return (
             <div className="single__review">
                 <div className="review__details">
-                    <div>
-
-                    </div>
                     <div className="username">
                     <FontAwesomeIcon icon={faUser} />
                         {current_user[review.author_id].username}
