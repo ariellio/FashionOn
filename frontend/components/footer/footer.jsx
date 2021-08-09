@@ -27,11 +27,11 @@ class Footer extends React.Component {
                             </a>
                         </div>
                         <div>
-                            <FontAwesomeIcon className="angelIcon" icon={faAngellist}>
-                                <a href="https://angel.co/u/ariel-davies">
-                                    <img src="https://angel.co/u/ariel-davies" alt="" />
-                                </a>
-                            </FontAwesomeIcon>
+                            <a href="https://angel.co/u/ariel-davies">
+                                <FontAwesomeIcon className="angelIcon" icon={faAngellist}>
+                                        <img src="https://angel.co/u/ariel-davies" alt="" />
+                                </FontAwesomeIcon>
+                            </a>
                         </div>
                     </div>
                 </div>)
