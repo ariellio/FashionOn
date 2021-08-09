@@ -13,18 +13,15 @@ class Footer extends React.Component {
 
         render() {
                 return (<div onClick={this.componentDidUpdate} className="footer">
-                        <div>
-                            Back to top
-                        </div>
                     <div className="bigFooter">
                         <div>
-                            <p className="footerInfo">
-                                Get to know us
-                            </p>
+                            <a href="https://github.com/ariellio">
+                                <img height="20px" src="https://cdn.iconscout.com/icon/free/png-512/github-138-459178.png" alt=""/>
+                            </a>
                         </div>
                         <div>
                             <p className="footerInfo">
-                                Make Money with us
+                            LinkedIn
                             </p>
                         </div>
                         <div>
