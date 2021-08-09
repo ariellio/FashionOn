@@ -5,6 +5,7 @@ import { Link } from 'react-router-dom';
 import React from 'react';
 import { fetchItems } from '../../util/item_api_util';
 import {deleteReview} from '../../actions/review_actions';
+import {receiveCurrentUser} from '../../actions/session_actions';
 
 const mSTP = (state, ownprops) => {
     return {
