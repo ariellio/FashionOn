@@ -31,6 +31,7 @@ Creating this project required the use of assimilating a wide variety of technol
 
 ## Items Show
 <img width="1794" alt="Screen Shot 2021-07-16 at 10 25 26 AM" src="https://user-images.githubusercontent.com/81823461/125963152-a71af8a1-939b-4da9-9d2a-fb8e0dbfa7a6.png">
+
   * Users can view all information
   * Users can interact with item image, read about the product and create a comment in the secion below
   * Each image was created using Amazon AWS S3
