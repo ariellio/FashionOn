@@ -2,6 +2,7 @@ import React from 'react'
 import { fetchReviews } from '../../actions/review_actions'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faStar } from '@fortawesome/free-solid-svg-icons'
+import { Redirect,Route } from 'react-router'
 
 
 class ReviewsForm extends React.Component {
@@ -22,6 +23,7 @@ class ReviewsForm extends React.Component {
         if (!this.props.review) {
             this.props.fetchReview(this.props.match.params.reviewId)
         }
+      
     }
 
     handleUpdate(field){
@@ -29,6 +31,8 @@ class ReviewsForm extends React.Component {
     }
     
     render() {
+        
+    
     
     return (
         <form className="createEdit__form__container" onSubmit={this.handleSubmit}>

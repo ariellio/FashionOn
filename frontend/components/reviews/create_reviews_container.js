@@ -5,14 +5,15 @@ import {createReview} from '../../actions/review_actions'
 
 
 
-const mSTP = (state, ownprops) => {   
+const mSTP = (state, ownprops) => { 
     return {
         review: {
             title: "",
             body: "",
             rating: 0,
             item_id: ownprops.match.params.itemId
-        }
+        },
+        currentUser: Object.values(state.session)
     }
 }
 

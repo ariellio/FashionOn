@@ -11,15 +11,16 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 class ItemShow extends React.Component {
     constructor(props) {
         super(props)
-        // debugger
+        // this.displayError = this.displayError.bind(this)
     }
     
     componentDidMount() {
         this.props.fetchItem(this.props.match.params.itemId)
     }
+
+   
         
     render() {
-        // debugger
         const {item, reviews, deleteReview, user} = this.props
         //render photos if there are photos
         if (item === undefined) return null;
@@ -153,8 +154,9 @@ class ItemShow extends React.Component {
                             <div className="showPage__createReview__container">
                                 <div className="showPage__review__content">
                                     <h3>Review Product</h3>
-                                    <p> Must be logged in to share your thoughts</p>
-                                    <button className="showPage__createReview__button">Write a Customer Review</button>
+
+                                    {/* <p> Must be logged in to share your thoughts</p> */}
+                                    <button onClick={this.displayError} className="showPage__createReview__button">Write a Customer Review</button>
                                 </div>
                             </div>
                             <Reviews reviews={reviews} deleteReview={deleteReview} current_user={user}/>
