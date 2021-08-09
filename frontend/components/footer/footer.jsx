@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
+import { faAngellist } from '@fortawesome/free-brands-svg-icons'
 
 class Footer extends React.Component {
         constructor(props){
@@ -16,28 +18,20 @@ class Footer extends React.Component {
                     <div className="bigFooter">
                         <div>
                             <a href="https://github.com/ariellio">
-                                <img height="20px" src="https://cdn.iconscout.com/icon/free/png-512/github-138-459178.png" alt=""/>
+                                <img height="25px" src="https://cdn.iconscout.com/icon/free/png-128/github-165-864021.png" alt=""/>
                             </a>
                         </div>
                         <div>
-                            <p className="footerInfo">
-                            LinkedIn
-                            </p>
+                            <a href="https://www.linkedin.com/in/ariel-davies-84456a113/">
+                                <img height="25px" src="https://cdn.iconscout.com/icon/free/png-128/linkedin-3089482-2567434.png" alt="" />
+                            </a>
                         </div>
                         <div>
-                            <p className="footerInfo">
-                                FashionOn Payment Products
-                            </p>
-                        </div>
-                        <div>
-                            <p className="footerInfo">
-                                Let us Help You
-                            </p>
-                        </div>
-                        <div>
-                            <p className="footerInfo">
-                                Logo and locations
-                            </p>
+                            <FontAwesomeIcon className="angelIcon" icon={faAngellist}>
+                                <a href="https://angel.co/u/ariel-davies">
+                                    <img src="https://angel.co/u/ariel-davies" alt="" />
+                                </a>
+                            </FontAwesomeIcon>
                         </div>
                     </div>
                 </div>)
