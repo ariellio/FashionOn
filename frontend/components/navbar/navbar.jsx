@@ -40,7 +40,7 @@ const Navbar = () => {
                      </div>
                      </div>
               </div>
-              <div className="under__navBar">
+              {/* <div className="under__navBar">
                      <span className="option__one">
                             Shirts
                      </span>
@@ -53,7 +53,7 @@ const Navbar = () => {
                      <span className="option__one">
                             Jeans
                      </span>
-              </div>
+              </div> */}
               {/* <div className="dropdown__content">
                      <span className="link__to__login">
                             <button className="login__signup__buttons"><Link to="/login">Sign In</Link></button>
