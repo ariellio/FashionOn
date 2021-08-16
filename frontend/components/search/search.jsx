@@ -14,8 +14,6 @@ class Search extends Component {
     }
 
     componentDidUpdate(prevProps){
-        
-        
         if (prevProps.match.params.queryString !== this.props.match.params.queryString) {
             this.props.fetchSearchResults(this.props.match.params.queryString)
         }
@@ -26,8 +24,6 @@ class Search extends Component {
     }
 
     render() {
-        
-
         return (
             <div>
                <ItemIndex items={this.props.items}/>

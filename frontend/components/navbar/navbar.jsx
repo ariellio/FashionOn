@@ -26,14 +26,14 @@ const Navbar = () => {
                             <div className="header__option">
                                    <GreetingsContainer />
                             </div>
-                            <div className="header__option__custom">
+                            {/* <div className="header__option__custom">
                                    <span className="header__optionOne">
                                           Returns
                                    </span>
                                    <span className="header__optionTwo">
                                           & Orders
                                    </span>
-                            </div>
+                            </div> */}
                      <div className="header__optionCart">
                             <FontAwesomeIcon icon={faShoppingCart} />
                             <span className="header_optionTwo header__cartCount">0</span>

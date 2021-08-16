@@ -47,19 +47,18 @@ class ReviewsForm extends React.Component {
                     <textarea className="review__body__input" value={this.state.body} onChange={this.handleUpdate('body')}/>
                 </div>
             </label>
-            <label> Rating
+            <label> 
                 {/* <div>
                     <input className="review__rating__input" value={this.state.rating} type="radio" onChange={this.handleUpdate('rating')}/>
                 </div> */}
-                <div>
-                    {/* <input className="review__rating__input" value={this.state.rating} type="radio" onChange={this.handleUpdate('rating')}/> */}
+                {/* <div>
                     <span className="star-cb-group">
                     <input type="radio" id="rating-4" name="rating" value={this.state.rating} /><label><FontAwesomeIcon icon={faStar}/></label>
                     <input type="radio" id="rating-3" name="rating" value={this.state.rating} /><label htmlFor="rating-3"><FontAwesomeIcon icon={faStar}/></label>
                     <input type="radio" id="rating-2" name="rating" value={this.state.rating} /><label htmlFor="rating-2"><FontAwesomeIcon icon={faStar}/></label>
                     <input type="radio" id="rating-1" name="rating" value={this.state.rating} /><label htmlFor="rating-1"><FontAwesomeIcon icon={faStar}/></label>
                     </span>
-                </div>
+                </div> */}
             </label>
             <button onChange={this.handleSubmit}>Submit</button>
             </div>

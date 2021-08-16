@@ -14,7 +14,13 @@ class Searchbar extends Component {
         this.handleInput = this.handleInput.bind(this);
 
     }
-
+    
+    handleKeyPress = (event) => {
+        debugger
+        if(event.key === 'Enter'){
+            this.props.history.push(`/items/search/${this.state.search}`)
+        }
+      }
 
     handleSubmit(e) {
         e.preventDefault();
@@ -30,6 +36,7 @@ class Searchbar extends Component {
     handleInput(e){
         e.preventDefault();
         this.setState({search: e.currentTarget.value})
+       
     }
 
     render() {
@@ -37,8 +44,8 @@ class Searchbar extends Component {
         return (
             <div className="searchBar__container">
                 <div className="header__search" onSubmit={this.handleSubmit}>
-                            <input className="header__searchInput" value={this.state.search} type="text" onChange={this.handleInput}/>
-                                <FontAwesomeIcon onClick={this.handleSubmit} className="header__searchIcon" icon={faSearch} />
+                            <input className="header__searchInput" onKeyDown={this.handleKeyPress} value={this.state.search} type="text" onChange={this.handleInput}/>
+                                <FontAwesomeIcon onKeyDown={this.handleKeyPress} onClick={this.handleSubmit} className="header__searchIcon" icon={faSearch} />
                 </div>
             </div>
         )
