@@ -21,6 +21,30 @@ description: "<ul>
     <li>  A rubber outsole with cutouts provides traction. </li>
 </ul>", price: '700.25', category_id: 3, })
 
+newBalance550 = Item.create!({ name: 'New Balance 550', 
+description: "<ul>
+    <li> Minimalist construction.  </li>
+    <li> We recreated a timeless classic with this tribute to ‘90s pro ballers and the streetwear that defined a hoops generation.</li>
+    <li> Underfoot, a full-length Boost midsole wrapped in a black rubber cage provides cushioning </li>
+    <li>  Made for the player who knows authenticity. </li>
+</ul>", price: '300.35', category_id: 3, })
+
+whitenewBalance550 = Item.create!({ name: 'White New Balance 550', 
+description: "<ul>
+    <li> Minimalist construction.  </li>
+    <li> We recreated a timeless classic with this tribute to ‘90s pro ballers and the streetwear that defined a hoops generation.</li>
+    <li> Underfoot, a full-length Boost midsole wrapped in a black rubber cage provides cushioning </li>
+    <li>  Made for the player who knows authenticity. </li>
+</ul>", price: '500.35', category_id: 3, })
+
+graynewBalance725 = Item.create!({ name: 'Gray New Balance 725', 
+description: "<ul>
+    <li> Minimalist construction.  </li>
+    <li> We recreated a timeless classic with this tribute to ‘90s pro ballers and the streetwear that defined a hoops generation.</li>
+    <li> Underfoot, a full-length Boost midsole wrapped in a black rubber cage provides cushioning </li>
+    <li>  Made for the player who knows authenticity. </li>
+</ul>", price: '700.35', category_id: 3, })
+
 noahHoodie = Item.create!({name: 'Noah Hoodie', 
 description: "<ul>
 <li> Made in Canada.  </li>
@@ -52,15 +76,15 @@ description: "<ul>
 <li> Made out of corinthian silks </li>
 <li> 100% organic </li>
 </ul>", 
-price: 834.45, category_id: 3, })
+price: 834.45, category_id: 5, })
 
-benandJerryHoodie = Item.create!({name: 'Ben&Jerry Hoodie', 
+benandJerryHoodie = Item.create!({name: 'Ben & Jerry Hoodie', 
 description:  "<ul>
 <li> Your favorite cartoon characters are here</li>
 <li> Finest comfy fabric </li>
 <li> Easy to clean </li>
 </ul>", 
-price: 245.99, category_id: 3, })
+price: 245.99, category_id: 5, })
 
 stussyHoodie = Item.create!({name: 'Stuss Hoodie', 
 description: "<ul>
@@ -68,7 +92,34 @@ description: "<ul>
 <li> Newest fabrics just for you </li>
 <li> Very comfortable </li>
 </ul>", 
-price: 834.76, category_id: 3, })
+price: 834.76, category_id: 5, })
+
+crooksTee = Item.create!({name: 'Crooks Crewneck', 
+description: "<ul>
+<li> Crooks & Castles</li>
+<li> Your classic skater brand</li>
+<li> Newest fabrics just for you </li>
+<li> Very comfortable </li>
+</ul>", 
+price: 234.76, category_id: 5, })
+
+anxietyTee = Item.create!({name: 'Anxiety Crewneck', 
+description: "<ul>
+<li> Long Sleeve Fit</li>
+<li> Wavy colorway</li>
+<li> Newest fabrics just for you </li>
+<li> Very comfortable </li>
+</ul>", 
+price: 494.76, category_id: 5, })
+
+godTee = Item.create!({name: 'God Crewneck', 
+description: "<ul>
+<li> Divine Fit</li>
+<li> Wavy colorway</li>
+<li> Newest fabrics just for you </li>
+<li> Very comfortable </li>
+</ul>", 
+price: 894.76, category_id: 5, })
 
 jeans = Item.create!({name: 'Classically Ripped Jeans', 
 description:"<ul>
@@ -76,7 +127,7 @@ description:"<ul>
 <li> Very comfortable </li>
 <li> Stretchable in the wash </li>
 </ul>", 
-price: 401.99, category_id: 3, })
+price: 401.99, category_id: 4, })
 
 jeans1 = Item.create!({name: 'Art Flare Jeans', 
 description: "<ul>
@@ -84,7 +135,7 @@ description: "<ul>
 <li> Be prepared to be unprepared in these </li>
 <li> Stretchable in the wash </li>
 </ul>", 
-price: 767.11, category_id: 3, })
+price: 767.11, category_id: 4, })
 
 jeans2 = Item.create!({name: 'Artistaclly Flared Jeans', 
 description: "<ul>
@@ -92,7 +143,7 @@ description: "<ul>
 <li> We give Andy Warhol a run for his money </li>
 <li> Stretchable in the wash </li>
 </ul>", 
-price: 767.38, category_id: 3, })
+price: 767.38, category_id: 4, })
 
 
 
@@ -101,8 +152,18 @@ review1 = Review.new({ title: "these yeezys are sooo awesome", body: "Sooooo ive
 
 
 
+
 yeezyPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/real+yeezy.jpeg')
 yeezy.photos.attach( io: yeezyPhoto_file, filename: 'real+yeezy.jpeg')
+
+newBalance550Photo_file = open('https://fashionon-seed.s3.amazonaws.com/newbalance550green.jpeg')
+newBalance550.photos.attach( io: newBalance550Photo_file, filename: 'newbalance550green.jpeg')
+
+whitenewBalance550Photo_file = open('https://fashionon-seed.s3.amazonaws.com/allwhitenewbalance550.png')
+whitenewBalance550.photos.attach( io: whitenewBalance550Photo_file, filename: 'allwhitenewbalance550.png')
+
+graynewBalance725Photo_file = open('https://fashionon-seed.s3.amazonaws.com/gray+new+balance.jpg')
+graynewBalance725.photos.attach( io: graynewBalance725Photo_file, filename: 'gray+new+balance.jpg')
 
 jordansPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/real+air+jordans.webp')
 jordans.photos.attach( io: jordansPhoto_file, filename: 'real+air+jordans.webp')
@@ -121,6 +182,15 @@ benandJerryHoodie.photos.attach( io: benandJerryHoodiePhoto_file, filename: 'hoo
 
 stussyHoodieHoodiePhoto_file = open('https://fashionon-seed.s3.amazonaws.com/hoodie1.png')
 stussyHoodie.photos.attach( io: stussyHoodieHoodiePhoto_file, filename: 'hoodie1.png')
+
+crooksCastlesPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/crookscastles.jpeg')
+crooksTee.photos.attach( io: crooksCastlesPhoto_file, filename: 'crookscastles.jpeg')
+
+anxietyTeePhoto_file = open('https://fashionon-seed.s3.amazonaws.com/vancarhell-anxiety-long-sleeve-t-shirt-streetwear-techwear-2_1000x.jpeg')
+anxietyTee.photos.attach( io: anxietyTeePhoto_file, filename: 'vancarhell-anxiety-long-sleeve-t-shirt-streetwear-techwear-2_1000x.jpeg')
+
+godTeePhoto_file = open('https://fashionon-seed.s3.amazonaws.com/godTee.jpg')
+godTee.photos.attach( io: godTeePhoto_file, filename: 'godTee.jpg')
 
 jeansPhoto_file = open('https://fashionon-seed.s3.amazonaws.com/real+white+jeans.jpeg')
 jeans.photos.attach( io: jeansPhoto_file, filename: 'real+white+jeans.jpeg')
