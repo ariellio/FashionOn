@@ -45,7 +45,7 @@ class ItemShow extends React.Component {
                                 <div className="item__price">
                                     <span className="price__tag">Price:</span> ${item.price}
                                 </div>
-                                <div className="option__buttons">
+                                {/* <div className="option__buttons">
                                     <button className="color__button">
                                         Color 
                                         <br />
@@ -56,7 +56,7 @@ class ItemShow extends React.Component {
                                         <br />
                                         <FontAwesomeIcon icon={faCaretDown}/>
                                     </button>
-                                </div>
+                                </div> */}
                                 <div className="item__description" dangerouslySetInnerHTML={ {__html: item.description}} />
                                 {/* <li> {item.description}</li>  */}
                             </div>
