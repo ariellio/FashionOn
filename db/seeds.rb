@@ -137,7 +137,7 @@ description: "<ul>
 </ul>", 
 price: 767.11, category_id: 4, })
 
-jeans2 = Item.create!({name: 'Artistaclly Flared Jeans', 
+jeans2 = Item.create!({name: 'Artistically Flared Jeans', 
 description: "<ul>
 <li> Stand out with these outlandish slacks</li>
 <li> We give Andy Warhol a run for his money </li>
