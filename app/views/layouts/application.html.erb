@@ -2,21 +2,23 @@
 <html>
   <head>
     <title>FashionOn</title>
-    <%= csrf_meta_tags %>
-    <%= csp_meta_tag %>
+      <%= csrf_meta_tags %>
+      <%= csp_meta_tag %>
+
+    <meta name="title" property="og:title" content="FashionOn" />
+    <meta property="og:type" content="Single Page Web Application" />
+    <meta name="image" property='og:image' content="project_pic.png" />
+    <meta name="description" property="og:description"
+      content="FashionOn is a full stack web application with a flare for fashion based on Amazon where users can search items, view items show pages and even have full CRUD functionality for leaving reviews."
+    />
+    <meta name="author" content="Ariel Davies" />
+    <meta property="og:url"
+      content="https://fashionon-app.herokuapp.com/#/"
+    />
 
     <%= stylesheet_link_tag    'application', media: 'all' %>
     <%= javascript_include_tag 'application' %>
 
-    <meta property="og:title" content="FashionOn" />
-     <meta property='og:image' content="<%= image_url('project_pic.png')%>"/>
-     <meta property="og:description"
-       content="FashionOn is a full stack web application with a flare for fashion based on Amazon where users can search items, 
-       view items show pages and even have full CRUD functionality for leaving reviews."
-     />
-     <meta property="og:url"
-       content="fashionon-app.herokuapp.com/#/"
-     />
   </head>
 
   <body>

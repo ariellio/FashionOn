@@ -130,7 +130,6 @@ class ItemShow extends React.Component {
                                 </button>
                                 <p>Thank you for shopping at FashionOn</p>
                                 <p className="bottom__line">
-                                    
                                 {/* <DeleteReview review={reviews} deleteReview={deleteReview}/> */}
                                 </p>
                             </div>  
@@ -142,7 +141,6 @@ class ItemShow extends React.Component {
                             <div className="showPage__createReview__container">
                                 <div className="showPage__review__content">
                                     <h3>Review Product</h3>
-
                                     {/* <p> Must be logged in to share your thoughts</p> */}
                                     <button onClick={this.displayError} className="showPage__createReview__button">Write a Customer Review</button>
                                 </div>
