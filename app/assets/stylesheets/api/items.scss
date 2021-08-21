@@ -155,3 +155,9 @@
   flex-grow: 0;
   flex-shrink: 0;
 }
+
+.review__errorMessage {
+  color: red;
+  padding: 5px;
+  text-align: center;
+}

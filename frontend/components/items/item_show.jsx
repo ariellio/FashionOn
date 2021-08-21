@@ -11,12 +11,18 @@ import { faCaretDown } from '@fortawesome/free-solid-svg-icons'
 class ItemShow extends React.Component {
     constructor(props) {
         super(props)
-        // this.displayError = this.displayError.bind(this)
+        this.state = {showMessage: false}
+        this.displayError = this.displayError.bind(this)
     }
     
     componentDidMount() {
         this.props.fetchItem(this.props.match.params.itemId)
     }
+
+    displayError(){
+        this.setState({showMessage: true});
+    }
+
 
    
         
@@ -97,7 +103,6 @@ class ItemShow extends React.Component {
             }else if (Object.values(user).length === 0) {
                 return (
                     <div className="total__show__page">
-        
                         <div className="item__container">
                             {
                                 item.photosUrl.map((photo, i) => {
@@ -142,7 +147,10 @@ class ItemShow extends React.Component {
                                 <div className="showPage__review__content">
                                     <h3>Review Product</h3>
                                     {/* <p> Must be logged in to share your thoughts</p> */}
-                                    <button onClick={this.displayError} className="showPage__createReview__button">Write a Customer Review</button>
+                                    <div className="review__errorMessage">
+                                        {this.state.showMessage ? "Need to sign in!" : ""}
+                                    </div>
+                                    <button key="logged__out" onClick={this.displayError} className="showPage__createReview__button">Write a Customer Review</button>
                                 </div>
                             </div>
                             <Reviews reviews={reviews} deleteReview={deleteReview} current_user={user}/>
