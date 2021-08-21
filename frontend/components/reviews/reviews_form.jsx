@@ -23,7 +23,10 @@ class ReviewsForm extends React.Component {
         if (!this.props.review) {
             this.props.fetchReview(this.props.match.params.reviewId)
         }
-      
+        
+        if (this.props.currentUser[0] === null) {
+            this.props.history.push(`/items/${this.props.review.item_id}`)
+        }
     }
 
     handleUpdate(field){
@@ -31,39 +34,31 @@ class ReviewsForm extends React.Component {
     }
     
     render() {
-        
-    
-    
-    return (
-        <form className="createEdit__form__container" onSubmit={this.handleSubmit}>
-            <div className="createEdit__form">
-            <label className="form__title"> Add a Headline
-                <div>
-                    <input className="review__title__input" value={this.state.title} type="text" onChange={this.handleUpdate('title')}/>
+        if (this.props.currentUser[0] !== null) {
+            return (
+            <form className="createEdit__form__container" onSubmit={this.handleSubmit}>
+                <div className="createEdit__form">
+                <label className="form__title"> Add a Headline
+                    <div>
+                        <input className="review__title__input" value={this.state.title} type="text" onChange={this.handleUpdate('title')}/>
+                    </div>
+                </label>
+                <label className="body__form"> Description
+                    <div>
+                        <textarea className="review__body__input" value={this.state.body} onChange={this.handleUpdate('body')}/>
+                    </div>
+                </label>
+                <button onChange={this.handleSubmit}>Submit</button>
                 </div>
-            </label>
-            <label className="body__form"> Description
+            </form>
+            )
+        }else {
+            return (
                 <div>
-                    <textarea className="review__body__input" value={this.state.body} onChange={this.handleUpdate('body')}/>
+                    Must be logged in :()
                 </div>
-            </label>
-            <label> 
-                {/* <div>
-                    <input className="review__rating__input" value={this.state.rating} type="radio" onChange={this.handleUpdate('rating')}/>
-                </div> */}
-                {/* <div>
-                    <span className="star-cb-group">
-                    <input type="radio" id="rating-4" name="rating" value={this.state.rating} /><label><FontAwesomeIcon icon={faStar}/></label>
-                    <input type="radio" id="rating-3" name="rating" value={this.state.rating} /><label htmlFor="rating-3"><FontAwesomeIcon icon={faStar}/></label>
-                    <input type="radio" id="rating-2" name="rating" value={this.state.rating} /><label htmlFor="rating-2"><FontAwesomeIcon icon={faStar}/></label>
-                    <input type="radio" id="rating-1" name="rating" value={this.state.rating} /><label htmlFor="rating-1"><FontAwesomeIcon icon={faStar}/></label>
-                    </span>
-                </div> */}
-            </label>
-            <button onChange={this.handleSubmit}>Submit</button>
-            </div>
-        </form>
-        )
+            )
+        }
     }
 }
 

@@ -15,6 +15,7 @@ const mSTP = (state, ownprops) => {
         },
         currentUser: Object.values(state.session)
     }
+    debugger
 }
 
 const mDTP = dispatch => {
